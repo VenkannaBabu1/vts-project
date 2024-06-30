@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-login {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.error-message {
+    color: red;
+    font-size: 10px;
+    margin-top: 5px;
+    display: flex;
+    padding: 5px;
+    padding-top: 10px;
+}
+
+.card {
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.37);
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text p {
+    font-size: 13px;
+    color: #25282d;
+    font-weight: 700;
+}
+
+.input-text {
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+}
+
+.in {
+    display: flex;
+    width: 100%;
+}
+
+.in-1 {
+    display: flex;
+    padding-top: 10px;
+}
+
+.input-text-2 {
+    display: flex;
+    width: 100%;
+}
+
+.input3 {
+    padding-top: 10px;
+}
+
+input[type="email"], input[type="password"] {
+    height: 45px;
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    border: 1px solid #070708;
+    padding: 0 10px;
+    padding-left: 30px;
+    outline: 0;
+    font-size: 13px;
+}
+
+input[type="password"] {
+    padding-right: 27px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 9px;
+    background-color: #007bff;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.forgot {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.forgot p {
+    font-size: 12px;
+}
+
+.forgot a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+.eye-icon {
+    cursor: pointer;
+}

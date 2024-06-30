@@ -1,0 +1,67 @@
+.AdminDashboardForm {
+    max-width: 500px;
+    margin: 0 auto ;
+    /* margin-top: 225px; */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    background-color: hsla(200, 65%, 72%, 0.6);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  .AdminDashboardForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .AdminDashboardForm form {
+    display: grid;
+    gap: 20px; 
+  }
+  
+  .AdminDashboardForm label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .AdminDashboardForm select,
+  .AdminDashboardForm input[type='number'],
+  .AdminDashboardForm textarea,
+  .AdminDashboardForm input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px; /* Small top margin for all input elements */
+  }
+
+  
+  
+  .AdminDashboardForm textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+  }
+  
+  .AdminDashboardForm button[type='submit'] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .AdminDashboardForm button[type='submit']:hover {
+    background-color: #45a049;
+  }
+
+  /* body{
+    background-image: url("https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/waves_live.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+  } */

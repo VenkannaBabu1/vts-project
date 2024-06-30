@@ -1,0 +1,114 @@
+.css {
+    /* background: url('https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/waves_live.gif'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-bottom: 450px;
+     margin-top: -100px;
+    
+
+  }
+  
+  .rejected-claims {
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+  .rejected-claims h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #fbf5f5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .rejected-claims table {
+    /* background-color: #fffcfc; */
+    width:85rem;
+    border-collapse:separate;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-color:10px solid #fff;
+    justify-content: space-between;
+    border: #fff;
+
+  }
+  
+  .rejected-claims th,
+  .rejected-claims td {
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    border-color:1px solid #fff;
+  }
+  
+  .rejected-claims th {
+    background-color: #0a0808;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    border-color:1px solid #fff;
+  }
+  
+  .rejected-claims tbody tr:nth-child(even) {
+    border-color:1px solid #fff;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .sea {
+    background-color: #160707;
+   
+    color: #fff;
+    border-color: 5px solid #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sea:hover {
+    background-color: #45a049;
+  }
+  
+  @media (max-width: 768px) {
+    .rejected-claims {
+      padding: 30px;
+    }
+    
+    .search-input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .sea {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }

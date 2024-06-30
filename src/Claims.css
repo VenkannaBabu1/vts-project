@@ -1,0 +1,120 @@
+.claim-main-container {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.claim-container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#claim {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  background: #F9F9F9;
+  padding: 25px;
+}
+
+#claim h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #1869b0;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#claim input[type="text"],
+#claim input[type="email"],
+#claim textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 8px;
+}
+
+#claim input[type="text"]:hover,
+#claim input[type="email"]:hover,
+#claim textarea:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #0b3ffc;
+}
+
+#claim textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#claim button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #1869b0;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#claim button[type="submit"]:hover {
+  background: #0675d6;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#claim button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#claim input:focus,
+#claim textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+#claim input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  margin: 0 0 5px;
+}
+
+#claim input[type="file"]:hover {
+  border: 1px solid #0b3ffc;
+  transition: border-color 0.3s ease-in-out;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}

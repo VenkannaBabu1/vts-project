@@ -1,0 +1,87 @@
+
+.Header {
+  width: 100%;
+  max-width: 350px; 
+  padding: 30px;
+  /* border: 1px solid #352c2c; */
+  border-radius: 1px;
+  background: #F9F9F9;
+  box-shadow: 0 0 20px 0 rgba(2, 68, 247, 0.2), 0 5px 5px 0 rgba(69, 74, 237, 0.24);
+  color: black;
+  margin-left: 800px;
+  margin-top: 200px;
+
+}
+
+.Header form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Header label {
+  margin-bottom: 10px;
+  
+}
+.label{
+  margin-left: 20px;
+}
+
+.Header input[type="text"],
+.Header input[type="number"],
+.Header input[type="file"] {
+  width: 45%; 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+  margin: 10px;
+  margin-right: 10px;
+  float:right;
+}
+
+
+.Header input[type="text"],
+.Header input[type="number"] {
+  width: 50%; 
+  height: 15px;
+}
+
+.Header input[type="file"] {
+  width: 100%;
+}
+
+.Header .button {
+  background-color: #1a39b6cd;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+ 
+}
+.Header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size:x-large;
+}
+
+.Header .button:hover {
+  background-color: #6ea070;
+}
+
+.Header h1 {
+  margin-bottom: 10px;
+}
+.required {
+  color: red;
+}
+h1{
+  justify-items: center;
+  color: rgb(47, 47, 210);
+}

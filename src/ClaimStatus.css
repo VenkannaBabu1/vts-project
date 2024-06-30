@@ -1,0 +1,143 @@
+.users-list {
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  align-items:center;
+  /* display: flex; */
+  /* flex-wrap: wrap;  */
+  /* flex-direction: row; */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+.card-grid{
+  display:flex;
+  gap: 20px;
+  flex-wrap: wrap;  
+}
+.h2 {
+  text-align: center;
+}
+
+.card-group {
+  display: flex;
+ 
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.card-group.blur-background {
+  filter: blur(5px);
+}
+
+.card {
+  
+  margin-bottom: 20px;
+  width: calc(33% - 20px); 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card.expanded {
+  
+  transform: scale(1.1); 
+  z-index: 1;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  flex-direction: row;
+  padding: 15px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.more-info {
+  margin-top: 10px;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.text-muted {
+  font-size: 0.8em;
+}
+
+.expanded-card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 300px;
+  z-index: 2;
+}
+
+.card-group:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+.card {
+  margin-bottom: 20px;
+  
+}
+
+.expanded-card-content {
+  background-color: #ffffff00;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 800px; 
+  /* justify-content:center; */
+  
+}
+
+.expanded-card {
+  /* align-items: center; */
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column; 
+  width: 250%; 
+}
+.bt1{
+  /* justify-content: center;  */
+  background-color:rgb(33, 33, 156);
+  align-items: center;
+  color: aliceblue;
+  border-radius: 2rem;
+  /* padding-left: -1000px; */
+}
+.btnnn{
+  background-color:#000;
+  align-items: center;
+  color: aliceblue;
+  order-radius: 2rem;
+  margin-left:5px;
+  padding-left:1px;
+  border-radius: 2rem;
+
+
+
+}
+.div1{
+  align-items: center;
+  justify-content: center;
+}

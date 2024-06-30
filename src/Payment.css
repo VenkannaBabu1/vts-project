@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.health-contain{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+.payment-container {
+  position: relative;
+  /* top: 100px; */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
+
+.payment-container .image {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-container img {
+  max-width: 80%;
+  height: auto;
+}
+
+.payment-container form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.payment-container form div {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.payment-container form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.payment-container form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0.5vmin;
+}
+
+.payment-container form button {
+  padding: 10px 20px;
+  background-color: teal;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-container form button:hover {
+  background-color: rgba(0, 128, 128, 0.725);
+}

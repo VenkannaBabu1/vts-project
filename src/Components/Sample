@@ -1,0 +1,224 @@
+import React, { useState,useEffect } from 'react';
+import car from "../assets/car.jpg";
+import health from "../assets/health.jpg";
+import life from "../assets/life.jpeg";
+import travel from "../assets/travel.jpg";
+import { IoBandage } from "react-icons/io5";
+import { LuBike } from "react-icons/lu";
+import { FaCar } from "react-icons/fa";
+import { FaTruck } from "react-icons/fa6";
+import { FaBus } from "react-icons/fa";
+import { FaMoneyCheck } from "react-icons/fa";
+import { PiFirstAidKitBold } from "react-icons/pi";
+import { PiBankBold } from "react-icons/pi";
+import { MdHealthAndSafety } from "react-icons/md";
+import { RiHealthBookFill } from "react-icons/ri";
+import { GiHealthNormal } from "react-icons/gi";
+import { MdLocalHospital } from "react-icons/md";
+import { MdOutlineFlight } from "react-icons/md";
+import { RiShip2Fill } from "react-icons/ri";
+import { FaHome } from "react-icons/fa";
+import { BsPiggyBankFill } from "react-icons/bs";
+import Image from "./Image";
+import House from "../assets/House.jpg"
+import House2 from "../assets/House2.svg"
+const Hero = () => {
+  const [selectedIcon, setSelectedIcon] = useState(null);
+
+  const handleIconClick = (iconName) => {
+    setSelectedIcon(iconName);
+  };
+ useEffect(()=>{
+    setSelectedIcon('Motor')
+ },[])
+  const getBackgroundImage = () => {
+    switch (selectedIcon) {
+      case 'Motor':
+        return car;
+      case 'Health':
+        return health;
+      case 'Travel':
+        return travel;
+      case 'Life':
+        return life;
+      case 'House':
+        return House;
+      default:
+        return car;
+    }
+  };
+
+  return (
+    <div className="relative h-screen flex">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: `url(${getBackgroundImage()})` }}
+      ></div>
+      {/* Black overlay */}
+      <div className="absolute inset-0 bg-black opacity-10 z-10"></div>
+
+<div className='flex flex-r'>
+      {/* Left side container */}
+      <div className="relative z-20 flex  ml-20 flex-col items-start justify-center mt-3 px-6 w-[800px]">
+        <div className="flex flex-col items-start justify-center h-full w-full">
+          {/* Company title */}
+          <div className="mb-6">
+            <h1 className="text-4xl text-orange-400 font-bold mb-2">Secure Life <br/>
+               Insurance</h1>
+            <p className=" text-[20px] text-slate-950">"Providing peace of mind since 1985."</p>
+          </div>
+          
+          {/* Icons for insurance types */}
+          <div className="flex space-x-4 mb-2">
+            {/* Motor icon */}
+            <div
+              className={`cursor-pointer p-4 w-20 h-20 transition transform bg-white border-2 rounded-lg ${
+                selectedIcon === 'Motor' ? 'border-blue-500' : 'border-transparent'
+              } hover:border-blue-500`}
+              onClick={() => handleIconClick('Motor')}
+            >
+              <img
+                src="https://orientalinsurance.org.in/static/media/car.cd98bdc566c7a59774307c898c332362.svg"
+                alt="Motor Icon"
+                className="w-full h-full"
+              />
+            </div>
+
+            {/* Health icon */}
+            <div
+              className={`cursor-pointer p-4 w-20 h-20 transition transform bg-white border-2 rounded-lg ${
+                selectedIcon === 'Health' ? 'border-blue-500' : 'border-transparent'
+              } hover:border-blue-500`}
+              onClick={() => handleIconClick('Health')}
+            >
+              <img src="https://orientalinsurance.org.in/static/media/health.a615ccbeb7de25883c592d0122ab5b0b.svg" alt="Health Icon" className="w-full h-full" />
+            </div>
+
+            {/* Travel icon */}
+            <div
+              className={`cursor-pointer p-4 w-20 h-20 transition transform bg-white border-2 rounded-lg ${
+                selectedIcon === 'Travel' ? 'border-blue-500' : 'border-transparent'
+              } hover:border-blue-500`}
+              onClick={() => handleIconClick('Travel')}
+            >
+              <img src="https://orientalinsurance.org.in/static/media/travel.2c2bf4c0fea42354ebf85ededb22c392.svg" alt="Travel Icon" className="w-full h-full" />
+            </div>
+
+            {/* Life icon */}
+            <div
+              className={`cursor-pointer p-4 w-20 h-20 transition transform bg-white border-2 rounded-lg ${
+                selectedIcon === 'Life' ? 'border-blue-500' : 'border-transparent'
+              } hover:border-blue-500`}
+              onClick={() => handleIconClick('Life')}
+            >
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyDSjiqaBLZTHlbI1DWcDgzfY25a2-p_RAGA&s" alt="Life Icon" className="w-full h-full" />
+            </div>
+
+            {/* House icon */}
+            <div
+              className={`cursor-pointer p-4 w-20 h-20 transition transform bg-white border-2 rounded-lg ${
+                selectedIcon === 'House' ? 'border-blue-500' : 'border-transparent'
+              } hover:border-blue-500`}
+              onClick={() => handleIconClick('House')}
+            >
+              <img src={House2} alt="Accident Icon" className="w-full h-full" />
+            </div>
+          </div>
+
+          {/* Conditional rendering of policy sections */}
+          {selectedIcon && (
+            <div className="bg-white p-6 rounded-lg shadow-lg mt-8">
+              {selectedIcon === 'Motor' && (
+                <div className="motor-policies grid grid-cols-2 gap-4">
+                  {/* Motor policies content */}
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><LuBike className="text-2xl mr-2"/>2 Wheelers</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><FaCar className="text-2xl mr-2"/>4 Wheelers</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><FaTruck className='text-3xl mr-2'/>Commercial Vehicles: Goods</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><FaBus className='text-3xl mr-2'/>Commercial Vehicles: Passengers</a>
+                  </div>
+                </div>
+              )}
+
+              {selectedIcon === 'Travel' && (
+                <div className="travel-policies grid grid-cols-2 gap-4 mt-4">
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><MdOutlineFlight className="text-2xl mr-2"/>International Trip</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><RiShip2Fill className="text-2xl mr-2"/>Domestic Trip</a>
+                  </div>
+                </div>
+              )}
+
+              {selectedIcon === 'Health' && (
+                <div className="health-plans grid grid-cols-2 gap-4 mt-4">
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><MdHealthAndSafety className="text-2xl mr-2"/>Super Health Top-up</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><RiHealthBookFill className="text-2xl mr-2"/>Health Top-up</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><GiHealthNormal className="text-2xl mr-2"/>Family Health Plan</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><MdLocalHospital className="text-2xl mr-2"/>Individual Health Plan</a>
+                  </div>
+                </div>
+              )}
+
+              {selectedIcon === 'Life' && (
+                <div className="life-plans grid grid-cols-2 gap-4 mt-4">
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><FaHome className="text-2xl mr-2"/>Term Life Insurance</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><BsPiggyBankFill className="text-2xl mr-2"/>Whole Life Insurance</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><PiBankBold className="text-2xl mr-2"/>Endowment Plans</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><FaMoneyCheck className="text-2xl mr-2"/>Money Back Plans</a>
+                  </div>
+                </div>
+              )}
+
+              {selectedIcon === 'House' && (
+                <div className="house-plans grid grid-cols-2 gap-4 mt-4">
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><IoBandage className="text-2xl mr-2"/>Swagruha Policy</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><PiFirstAidKitBold className="text-2xl mr-2"/>Home Shield</a>
+                  </div>
+                  <div className="border border-gray-200 p-4 hover:border-orange-500 transition rounded-md">
+                    <a href="#" className="text-black hover:text-orange-500 flex items-center"><PiFirstAidKitBold className="text-2xl mr-2"/>Suraksha Bima</a>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Right side container for Image */}
+      <div className="relative z-20 flex items-center justify-center h-full ml-40 w-[270px] mt-24 rounded-md">
+        <div className="h-737 w-737 flex items-center justify-center">
+          <Image />
+        </div>
+      </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;
