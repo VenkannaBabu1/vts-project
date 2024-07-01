@@ -117,8 +117,8 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="forgot">
-                        <p>Forgot your password? <a href="#">click here</a></p><br />
-                        <p>Not registered? <a href="/register">click here</a></p>
+                        <p>Forgot your password? <h6 onClick={navigate("#")}>click here</h6></p><br />
+                        <p>Not registered? <h6 onClick={navigate("/register")}>click here</h6></p>
                     </div>
                 </div>
             </div>

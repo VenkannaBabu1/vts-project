@@ -11,16 +11,21 @@ const UserNav = () => {
         </div>
         <div className='nav-items '>
             <ul className='flex flex-row space-x-20'>
-                <li><a href="/user-all-policies">All Policies</a>
+                <li>
+                  {/* <a href="/user-all-policies">All Policies</a> */}
+                  <h6 onClick={() => {navigate("/user-all-policies")}}>All Policies</h6>
                 </li>
                 <li>
-                    <a href="/my-policies">My Policies</a>
+                    {/* <a href="/my-policies">My Policies</a> */}
+                    <h6 onClick={() => {navigate("/my-policies")}}>My Policies</h6>
                 </li>
                 <li>
-                    <a href="/claimstatus">Claims </a>
+                    {/* <a href="/claimstatus">Claims </a> */}
+                    <h6 onClick={() => {navigate("/claimstatus")}}>Claims</h6>
                 </li>
                 <li>
-                    <a href="/user-payments">Payments</a>
+                    {/* <a href="/user-payments">Payments</a> */}
+                    <h6 onClick={() => {navigate("/user-payments")}}>Payments</h6>
                 </li>
                 
                 
