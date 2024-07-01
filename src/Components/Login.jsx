@@ -117,8 +117,8 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="forgot">
-                        <p>Forgot your password? <button onClick={navigate("#")}>click here</button></p><br />
-                        <p>Not registered? <button onClick={navigate("/register")}>click here</button></p>
+                        <p>Forgot your password? <button onClick={() => navigate("#")}>click here</button></p><br />
+                        <p>Not registered? <button onClick={() => navigate("/register")}>click here</button></p>
                     </div>
                 </div>
             </div>

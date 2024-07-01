@@ -230,3 +230,14 @@ nav {
         text-align: center;
     }
 }
+
+/* Navbar.css */
+.nav-items .relative:hover .drop-down {
+    display: block;
+  }
+  
+  .drop-down {
+    display: none;
+    /* additional styles */
+  }
+  
