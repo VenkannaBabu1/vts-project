@@ -13,19 +13,19 @@ const UserNav = () => {
             <ul className='flex flex-row space-x-20'>
                 <li>
                   {/* <a href="/user-all-policies">All Policies</a> */}
-                  <h6 onClick={() => {navigate("/user-all-policies")}}>All Policies</h6>
+                  <button onClick={() => {navigate("/user-all-policies")}}>All Policies</button>
                 </li>
                 <li>
                     {/* <a href="/my-policies">My Policies</a> */}
-                    <h6 onClick={() => {navigate("/my-policies")}}>My Policies</h6>
+                    <button onClick={() => {navigate("/my-policies")}}>My Policies</button>
                 </li>
                 <li>
                     {/* <a href="/claimstatus">Claims </a> */}
-                    <h6 onClick={() => {navigate("/claimstatus")}}>Claims</h6>
+                    <button onClick={() => {navigate("/claimstatus")}}>Claims</button>
                 </li>
                 <li>
                     {/* <a href="/user-payments">Payments</a> */}
-                    <h6 onClick={() => {navigate("/user-payments")}}>Payments</h6>
+                    <button onClick={() => {navigate("/user-payments")}}>Payments</button>
                 </li>
                 
                 

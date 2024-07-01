@@ -15,7 +15,7 @@ const SurveyorNav = () => {
             <ul className='flex flex-row space-x-20'>
                 <li>
                   {/* <a href='/ClaimAcceptRejectAgent'>All Claims</a> */}
-                  <h6 onClick={() => {navigate("/ClaimAcceptRejectAgent")}}>All Claims</h6>
+                  <button onClick={() => {navigate("/ClaimAcceptRejectAgent")}}>All Claims</button>
                 </li>
                 <div className="login">
             <button className='Login-btn text-white'>policies</button>
@@ -29,19 +29,19 @@ const SurveyorNav = () => {
             {
               <ul className="drop-down">
                 <li>
-                  <h6 onClick={( ) => {navigate("/health-applications")}}>HealthPolicy Approval</h6>
+                  <button onClick={( ) => {navigate("/health-applications")}}>HealthPolicy Approval</button>
                 </li>
                 <li>
-                  <h6 onClick={() => {navigate("/home-applications")}}>HomePolicy Approval</h6>
+                  <button onClick={() => {navigate("/home-applications")}}>HomePolicy Approval</button>
                 </li>
                 <li>
-                  <h6 onClick={() => {navigate("/life-applications")}}>LifePolicy Approval</h6>
+                  <button onClick={() => {navigate("/life-applications")}}>LifePolicy Approval</button>
                 </li>
                 <li>
-                  <h6 onClick={() => {navigate("/vehicle-applications")}}>VehiclePolicy Approval</h6>
+                  <button onClick={() => {navigate("/vehicle-applications")}}>VehiclePolicy Approval</button>
                 </li>
                 <li>
-                  <h6 onClick={() => {navigate("/travel-applications")}}>TravelPolicy Approval</h6>
+                  <button onClick={() => {navigate("/travel-applications")}}>TravelPolicy Approval</button>
                 </li>
               </ul>
             }
