@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 import axios from 'axios';
 import { Store } from '../App';
-import { useNavigate } from 'react-router-dom';
+import {  Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [inputText, setInputText] = useState({
@@ -117,8 +117,8 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="forgot">
-                        <p>Forgot your password? <button onClick={() => navigate("#")}>click here</button></p><br />
-                        <p>Not registered? <button onClick={() => navigate("/register")}>click here</button></p>
+                        <p>Forgot your password? <Link to="/">click here</Link></p><br />
+                        <p>Not registered? <Link to="/register">click here</Link></p>
                     </div>
                 </div>
             </div>
