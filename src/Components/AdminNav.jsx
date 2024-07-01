@@ -11,13 +11,13 @@ const AdminNav = () => {
         </div>
         <div className='nav-items '>
             <ul className='flex flex-row space-x-20'>
-                <li><a href="/add-policy">Add Policies</a>
+                <li><h6 onClick = {() => navigate("/add-policy")}>Add Policies</h6>
                 </li>
                 <li>
-                    <a href="/view-all-policies">All Policies</a>
+                    <h6 onClick = {() => navigate("/view-all-policies")>All Policies</h6>
                 </li>
                 <li>
-                    <a href="/ClaimAcceptReject">All Claims</a>
+                    <h6 onClick = {() => navigate("/ClaimAcceptReject")>All Claims</h6>
                 </li>
                
                 
