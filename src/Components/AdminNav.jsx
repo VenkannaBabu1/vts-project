@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AdminNav = () => {
   const navigate = useNavigate();
@@ -11,9 +11,13 @@ const AdminNav = () => {
       </div>
       <div className='nav-items'>
         <ul className='flex flex-row space-x-20'>
-          <li><button onClick={() => navigate("/add-policy")}>Add Policies</button></li>
+          {/* <li><button onClick={() => navigate("/add-policy")}>Add Policies</button></li>
           <li><button onClick={() => navigate("/view-all-policies")}>All Policies</button></li>
           <li><button onClick={() => navigate("/ClaimAcceptReject")}>All Claims</button></li>
+          */}
+          <li><Link to="/add-policy">Add Policies</Link></li>
+          <li><Link to="/view-all-policies">All Policies</Link></li>
+          <li><Link to="/ClaimAcceptReject">All Claims</Link></li>
         </ul>
       </div>
       <div className="btn">

@@ -118,7 +118,7 @@ const Login = () => {
                     </form>
                     <div className="forgot">
                         <p>Forgot your password? <Link to="/">click here</Link></p><br />
-                        <p>Not registered? <Link to="/register">click here</Link></p>
+                        <Link to="/register">Not registered? click here</Link>
                     </div>
                 </div>
             </div>
@@ -127,3 +127,4 @@ const Login = () => {
 }
 
 export default Login;
+//
