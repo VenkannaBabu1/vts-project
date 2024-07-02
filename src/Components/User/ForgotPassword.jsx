@@ -28,7 +28,7 @@ const ForgetPassword = () => {
   const handleEmailSubmit = async () => {
     try {
       const res = await axios.post(`${import.meta.env.VITE_URL}/otp/generate/${email}`);
-      setOriginalOtp(res.data.toString()); // Convert OTP to string
+      setOriginalOtp(res.data.toString()); 
       console.log('Original OTP from server:', res.data);
       setIsEmailSubmitted(true);
       toast.success('OTP sent to your email!');
@@ -66,7 +66,7 @@ const ForgetPassword = () => {
 
   return (
     <div className='forgotPasswordmain'>
-      <div className="forget-password-main-container">
+      <div className="forget-password-main-container1">
         <ToastContainer />
         <div className="forget-password-row justify-content-center">
           <div className="forget-password-card">
