@@ -73,7 +73,7 @@ function TravelAccept() {
                                     <img src={`data:image/png;base64,${req.documentimage}`} alt="Claim" className="rounded-circle" />
                                 </td>
                                 <td style={{verticalAlign:"middle"}}>
-                                          <button className='btn btn-success' onClick={() => navigate("/transaction",{state:{policy:req.policyNo, type:"TRAVEL"}})}>View Transactions</button>
+                                          <button className='btn btn-success' onClick={() => navigate("/transaction",{state:{policyNo:req.policyNo, type:"TRAVEL"}})}>View Transactions</button>
                                           </td>
 
                                        
