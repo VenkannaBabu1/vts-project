@@ -16,7 +16,7 @@ const AcceptPolicyAgent = () => {
   useEffect(() => {
     fetchUsers();
     fetchPolicyData();
-  }, []);
+  }, [policyNo, type]);
 
   const fetchUsers = async () => {
     try {
@@ -114,12 +114,12 @@ const AcceptPolicyAgent = () => {
                   />
                 </td>
                 <td style={{ verticalAlign: "middle" }}>
-                {policyData.status === 'PENDING'&&(
-                  <div>
-                    <button className='btn btn-primary' onClick={() => handleApproval("APPROVED")}>Accept</button>&nbsp;
-                    <button className='btn btn-danger' onClick={() => handleApproval("REJECTED")}>Reject</button>
-                  </div>
-                )}
+                  {policyData.status === 'PENDING' && (
+                    <div>
+                      <button className='btn btn-primary' onClick={() => handleApproval("APPROVED")}>Accept</button>&nbsp;
+                      <button className='btn btn-danger' onClick={() => handleApproval("REJECTED")}>Reject</button>
+                    </div>
+                  )}
                   {policyData.status === 'APPROVED' && (
                     <div>{policyData.status}</div>
                   )}
