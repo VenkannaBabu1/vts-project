@@ -120,12 +120,12 @@ const token = localStorage.getItem("token");
                                             <button className='btn btn-danger' onClick={() => handleApproval("REJECTED")}>Reject</button>
                                         </div>
                                  
-                                    {/* {user.status === 'APPROVED' && (
+                                    {user.status === 'APPROVED' && (
                                         <div>{user.status}</div>
                                     )}
                                     {user.status === 'REJECTED' && (
                                         <div>{user.status}</div>
-                                    )} */}
+                                    )}
                                 </td>
               
               </tr>
