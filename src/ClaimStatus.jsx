@@ -35,7 +35,7 @@ const UserClaimStatus = () => {
     <div className="min-h-screen bg-gray-100">
       <UserNav />
       <div className="users-list">
-        <h2>User Claim Status</h2>
+        <h1 className="text-center mb-4 h1 text-black">User Claim Status</h1>
         <div className="card-grid">
           {data.map((user) => (
             <div

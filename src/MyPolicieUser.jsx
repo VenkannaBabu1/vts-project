@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './ClaimStatus.css';
+import './mypolicies.css';
 import Footer from "./Components/Footer";
 import UserNav from './Components/UserNav';
 
@@ -58,8 +58,8 @@ const MyPolicieUser = () => {
     <div className="min-h-screen bg-gray-100">
     <UserNav />
 
-    <div className="users-list">
-      <h2>My Policies</h2>
+    <div className="users-list-policy">
+      <h1 className="text-center mb-4 h1 text-black">My Policies</h1>
       <div className="card-grid">
         {data.map((policy) => (
           <div
@@ -81,7 +81,7 @@ const MyPolicieUser = () => {
                 </div>
               )}
               <p className="card-text">
-                <small className="text-muted">Last updated 3 mins ago</small>
+                <small className="text-muted">Last updated 1 min ago</small>
               </p>
             </div>
           </div>

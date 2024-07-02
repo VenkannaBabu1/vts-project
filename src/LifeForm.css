@@ -4,7 +4,8 @@
     font-size: 12px;
     line-height: 30px;
     color: #777;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: url(https://www.iciciprulife.com/etc/designs/icicipru/hlv/images/Family%20protection1.gif) left no-repeat,url(https://media2.giphy.com/media/G9Fu7kinzJ4UhTKJm3/giphy.gif) right no-repeat;
+    background-size: auto;
     display: flex;
     padding: 50px;
     justify-content: center;

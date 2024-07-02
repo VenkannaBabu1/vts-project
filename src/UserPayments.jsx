@@ -44,7 +44,7 @@ function UserPayments() {
 
 
         <div className='payment'>
-        <h1 className="text-center mb-4 h1 text-fuchsia-50">ALL TRANSACTIONS</h1>
+        <h1 className="text-center mb-4 h1 text-black">ALL TRANSACTIONS</h1>
         <div className='container mt-4 shadow p-3 text-center'>
             
            
