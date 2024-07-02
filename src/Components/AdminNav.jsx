@@ -18,8 +18,39 @@ const AdminNav = () => {
           <li><Link to="/add-policy">Add Policies</Link></li>
           <li><Link to="/view-all-policies">All Policies</Link></li>
           <li><Link to="/ClaimAcceptReject">All Claims</Link></li>
+          <li><Link to="/all-payments">All Payments</Link></li>
+          <li><Link to="/view-all-users">All Users</Link></li>
         </ul>
       </div>
+      <div className="login">
+            <button className='Login-btn text-white'>View User policies</button>
+            {/* <ul className="drop-down">
+                <li><a href="/health-applications">HealthPolicy Approval</a> </li>
+                <li> <a href="/home-applications">HomePolicy Approval</a></li>
+                <li><a href="/life-applications">LifePolicy Approval</a></li>
+                <li><a href="/vehicle-applications">VehiclePolicy Approval</a></li>
+                <li><a href="/travel-applications">TravelPolicy Approval</a></li>
+            </ul> */}
+            {
+              <ul className="drop-down">
+                <li>
+                <Link to="/health-applied-users">HealthPolicy</Link>
+                </li>
+                <li>
+                <Link to="/home-applied-users">HomePolicy</Link>
+                </li>
+                <li>
+                <Link to="/life-applied-users">LifePolicy</Link>
+                </li>
+                <li>
+                <Link to="/vehicle-applied-users">VehiclePolicy</Link>
+                </li>
+                <li>
+                 <Link to="/travel-applied-users">TravelPolicy</Link>
+                </li>
+              </ul>
+            }
+        </div>
       <div className="btn">
         <button
           className='hover:bg-white hover:text-blue-500 p-2 rounded-md'

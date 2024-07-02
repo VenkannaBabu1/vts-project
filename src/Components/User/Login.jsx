@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react';
-import { FaEnvelope, FaEyeSlash, FaEye } from 'react-icons/fa';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import './Login.css';
 import axios from 'axios';
-import { Store } from '../App';
-import {  Link, useNavigate } from 'react-router-dom';
+import  { useContext, useState } from 'react';
+import { FaEnvelope, FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Store } from '../../App'; 
+import './Login.css';
 
 const Login = () => {
     const [inputText, setInputText] = useState({
@@ -39,8 +39,8 @@ const Login = () => {
                     token: res.data.token,
                     username: res.data.username
                 });
-                localStorage.setItem('token', res.data.token);  // Store token in localStorage
-                localStorage.setItem('username', res.data.username);  // Store username in localStorage
+                localStorage.setItem('token', res.data.token);  
+                localStorage.setItem('username', res.data.username);  
                 toast.success("Form submitted successfully");
                 if (res.data.role === "ROLE_USER") {
                     navigate('/user-dashboard');
@@ -117,7 +117,7 @@ const Login = () => {
                         </div>
                     </form>
                     <div className="forgot">
-                        <p>Forgot your password? <Link to="/">click here</Link></p><br />
+                        <p>Forgot your password? <Link to="/forgot-password">click here</Link></p><br />
                         <Link to="/register">Not registered? click here</Link>
                     </div>
                 </div>

@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 .container-login {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: url('https://www.policybazaar.com/pblife/assets/images/pb_life_Pay_As_YOu_Drive_Motor_insurance_Policybazaar_1589379102.gif');
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -33,7 +29,7 @@
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
     padding: 20px;
-    max-width: 400px;
+    max-width: 365px;
     width: 100%;
 }
 
@@ -60,20 +56,26 @@
 .in {
     display: flex;
     width: 100%;
+    min-width: 100px;
+    padding-right:20px ;
 }
 
 .in-1 {
     display: flex;
     padding-top: 10px;
+    padding-right:20px ;
 }
 
 .input-text-2 {
     display: flex;
     width: 100%;
+    padding-right:20px ;
 }
 
 .input3 {
     padding-top: 10px;
+    padding-right:20px ;
+    /* padding-right:20px ; */
 }
 
 input[type="email"], input[type="password"] {
@@ -90,6 +92,7 @@ input[type="email"], input[type="password"] {
 
 input[type="password"] {
     padding-right: 27px;
+
 }
 
 .buttons {

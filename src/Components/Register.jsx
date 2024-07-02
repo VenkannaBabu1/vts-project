@@ -4,7 +4,7 @@ import 'antd/dist/reset.css';
 import './Register.css';
 import moment from 'moment';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -227,7 +227,7 @@ const Register = () => {
               rules={[{ required: true, message: 'Please select your gender!' }]}
               className='form-item'
             >
-              <Select placeholder="Select your gender">
+              <Select name="gender" placeholder="Select your gender">
                 <Option value="male">Male</Option>
                 <Option value="female">Female</Option>
                 <Option value="other">Other</Option>
@@ -373,7 +373,9 @@ const Register = () => {
             </Button>
           </Form.Item>
           <div className='signin-btn'>
-            <a href="#">Already have an account? Sign in</a>
+          
+            <Link to="/login">Already have an account? Sign in</Link>
+          
           </div>
         </Form>
       </div>

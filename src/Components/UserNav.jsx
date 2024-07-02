@@ -24,6 +24,9 @@ const UserNav = () => {
           <li>
             <Link to="/user-payments">Payments</Link>
           </li>
+          <li>
+            <Link to="/user-profile">Profile</Link>
+          </li>
         </ul>
       </div>
       <div className="btn">

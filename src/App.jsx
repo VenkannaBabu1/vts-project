@@ -6,7 +6,7 @@ import ContactUs from "./Components/ContactUs";
 import  TravelForm from "./TravelForm"
 import AdminDashboard from "./Components/AdminDashboard";
 import SurveyorDashboard from "./Components/SurveyorDashboard";
-import Login from "./Components/Login"
+
 // import RegistrationPage from "./Components/RegistrationPage";
 import HomeForm from "./Components/HomeForm";
 import Claims from "./Claims"
@@ -37,8 +37,16 @@ import ViewAcceptedClaims from "./Components/ViewAcceptedClaims";
 import AddPolicy from "./Components/AddPolicy";
 import ViewAllPolicies from "./Components/ViewAllPolicies";
 import EditPolicy from "./Components/EditPolicy";
-
-
+import UserProfile from "./Components/User/UserProfile";
+import ForgetPassword from "./Components/User/ForgotPassword";
+import Login from "./Components/User/Login";
+import AdminAllPayments from "./Components/AdminAllPayments";
+import AdminViewAllUsers from "./Components/AdminViewAllUsers";
+import HealthPolicyView from "./Components/AdminViewPolicy/HealthPolicyView";
+import HomePolicyView from "./Components/AdminViewPolicy/HomePolicyView";
+import LifePolicyView from "./Components/AdminViewPolicy/LifePolicyView";
+import VehiclePolicyView from "./Components/AdminViewPolicy/VehiclePolicy";
+import TravelPolicyView from "./Components/AdminViewPolicy/TravelPolicyView";
 export const Store = createContext();
 function App() {
   const [tokenDetails, setTokenDetails] = useState(
@@ -57,16 +65,23 @@ function App() {
     <Route path="agent-dashboard" element={<SurveyorDashboard/>}/>
     <Route path="contact-us" element={<ContactUs/>}/>
 
+    <Route path="all-payments" element={<AdminAllPayments/>}/>
+    <Route path="view-all-users" element={<AdminViewAllUsers/>}/>
     <Route path="add-policy" element={<AddPolicy/>}/> 
     <Route path="user-all-policies" element={<AllPolicies/>}/>
     <Route path="view-all-policies" element={<ViewAllPolicies/>}/>
-    
+    <Route path="health-applied-users" element={<HealthPolicyView/>}/>
+    <Route path="home-applied-users" element={<HomePolicyView/>}/>
+    <Route path="life-applied-users" element={<LifePolicyView/>}/>
+    <Route path="vehicle-applied-users" element={<VehiclePolicyView/>}/>
+    <Route path="travel-applied-users" element={<TravelPolicyView/>}/>
     <Route path="accepted-claims" element={<ViewAcceptedClaims/>}/>
 
 
     <Route path="register" element={<Register/>}/>
     <Route path="login" element={<Login/>}/>
-
+    <Route path="user-profile" element={<UserProfile/>}/>
+    <Route path="forgot-password" element={<ForgetPassword/>}/>
 
     <Route path="homeform" element={<HomeForm/>}/>
     <Route path="lifeForm" element={<LifeForm/>} />
