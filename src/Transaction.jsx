@@ -115,12 +115,14 @@ const token = localStorage.getItem("token");
                 />
               </td>
               <td style={{verticalAlign:"middle"}}>
+                {user.status === 'PENDING'&&(
+
               <div>
-                                            <button className='btn btn-primary' onClick={() => handleApproval("APPROVED")}>Accept</button>&nbsp;
-                                            <button className='btn btn-danger' onClick={() => handleApproval("REJECTED")}>Reject</button>
-                                        </div>
-                                 
-                                    {user.status === 'APPROVED' && (
+                <button className='btn btn-primary' onClick={() => handleApproval("APPROVED")}>Accept</button>&nbsp;
+                <button className='btn btn-danger' onClick={() => handleApproval("REJECTED")}>Reject</button>
+              </div>
+                )}
+              {user.status === 'APPROVED' && (
                                         <div>{user.status}</div>
                                     )}
                                     {user.status === 'REJECTED' && (
