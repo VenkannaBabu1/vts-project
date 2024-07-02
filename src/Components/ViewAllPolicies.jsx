@@ -81,39 +81,39 @@ function AllPolicies() {
           <ul ref={slider}>
             {policies.map((policy, index) => (
               <li key={index}>
-                <div className="slide-card mb-5">
-                  <div className="user-info">
-                    <div className="mt-5">
-                      <h1 className="policy-name text-[20px] text-slate-600 font-bold">
-                        {policy.policyName}
-                      </h1>
-                      <h2 className="font-semibold text-[15px]">
-                        POLICY ID: {policy.policyId}
-                      </h2>
-                      <h2>
-                        PREMIUM: <span className="text-blue-500">{policy.premium}</span>
-                      </h2>
-                    </div>
+                <div className="slide-card mb-2">
+                <div className="user-info">
+                  <div className="mt-1 mb-0 ">
+                    <h1 className="policy-name text-[20px] text-slate-600 font-bold">
+                      {policy.policyName}
+                    </h1>
+                    <h2 className="font-semibold text-[15px]">
+                      POLICY ID: {policy.policyId}
+                    </h2>
+                    <h2>
+                      PREMIUM: <span className="text-blue-500">{policy.premium}</span>
+                    </h2>
                   </div>
-                  <hr className="w-full border-1 border-slate-800" />
-                  <div className="bg-blue-100 mt-3 px-1 py-1 rounded-xl">
-                    <h3 className="mt-6 text-[14px]">
-                      COVERAGE: <span className="text-orange-500">{policy.coverage}</span>
-                    </h3>
-                  </div>
-                  <div className="items-start space-x-2 bg-blue-100 rounded-xl px-2 mt-4 p-1">
-                    <h3 className="text-[11px] font-semibold ml-5">
-                      TERMS AND CONDITIONS:
-                    </h3>
-                    <span className="text-[12px] text-left">{policy.description}</span>
-                  </div>
+                </div>
+                  <hr className="w-full border-2 border-slate-800" />
+                <div className="bg-blue-100 mt-3 px-1 py-1 rounded-xl">
+                  <h3 className="mt-0.5 mb-1 text-[14px]">
+                    COVERAGE: <span className="text-orange-500">{policy.coverage}</span>
+                  </h3>
+                </div>
+                  <div className="items-start space-x-2 bg-blue-100 rounded-xl px-2 mt-1 p-1">
+                  <h3 className="text-[11.5px] font-semibold ml-1">
+                    TERMS AND CONDITIONS:
+                  </h3>
+                  <span className="space-x-2 w-full  text-[11px] px-2 mb-5">{policy.description}</span>
+                </div>
                   <button
-                    className="sea w-[150px] ml-6 hover:bg-orange-500 hover:text-white rounded-xl"
+                    className="sea1 w-[200px] ml-9 mt-0.5 hover:bg-orange-500 hover:text-white rounded-xl pb:2"
                     onClick={() => handleClick(policy.id, policy.type, policy.policyId, policy.policyName, policy.coverage, policy.description)}
                   >
                     Edit now
                   </button>
-                  <button onClick={() => handleDelete(policy.id)}> Delete</button>
+                  <button className=" w-[200px] ml-9 bg-purple-500 mt-1 hover:bg-orange-500 hover:text-white rounded-xl pb:1" onClick={() => handleDelete(policy.id)}> Delete</button>
                 </div>
               </li>
             ))}
