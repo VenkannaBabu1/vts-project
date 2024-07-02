@@ -31,7 +31,7 @@ const UserNav = () => {
       </div>
       <div className="btn">
         <button 
-          className='hover:bg-white hover:text-blue-500 p-2 rounded-md'
+          className='hover:bg-white hover:text-blue-500 p-2 rounded-md  text-white'
           onClick={() => {
             localStorage.removeItem('token');
             navigate('/');
