@@ -4,11 +4,13 @@
   margin: 0 auto;
   overflow: hidden;
   background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-  padding: 50px 0; 
+  background:url(https://onebron.com/wp-content/uploads/2022/02/966-privacy-policy-outline.gif) left   repeat ,url(https://polimexgroup.com/cdn-cgi/image/quality%3D85/assets/images/animation_300_kp84tg55.gif)   right  repeat;
+  padding: 50px 50px; 
   /* padding-top: 100px; */
   height: 100%;
   margin-top: 50px;
+  background-size:contain;
+  /* background-repeat: no-repeat; */
 }
 
 .next-btn,
@@ -49,7 +51,7 @@
 
 .slide-card {
   border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.984);
   background-color: #fff;
   margin: 10px;
   padding: 10px;
