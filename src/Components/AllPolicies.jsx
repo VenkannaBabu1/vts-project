@@ -106,7 +106,7 @@ function AllPolicies() {
                   <span className="space-x-2 w-full  text-[11px] px-2 mb-5">{policy.description}</span>
                 </div>
                 <button
-                  className="sea w-[150px] ml-6 hover:bg-orange-500 hover:text-white rounded-xl"
+                  className="sea w-[200px] ml-9 hover:bg-orange-500 hover:text-white rounded-xl pb-2 "
                   onClick={() => handleClick(policy.type, policy.policyId, policy.policyName)}
                 >
                   Apply now
