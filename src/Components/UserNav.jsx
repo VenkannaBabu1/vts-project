@@ -27,6 +27,9 @@ const UserNav = () => {
           <li>
             <Link to="/user-profile">Profile</Link>
           </li>
+          <li>
+            <Link to="/user-feedback">Feedback</Link>
+          </li>
         </ul>
       </div>
       <div className="btn">
