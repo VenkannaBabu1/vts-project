@@ -14,8 +14,30 @@ const AcceptPolicyAgent = () => {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    fetchUsers();
-    fetchPolicyData();
+    const determineType = () => {
+      switch (location.state.type) {
+        case "TRAVEL":
+          return "travelinsurance";
+        case "VEHICLE":
+          return "vehicleinsurance";
+        case "HOME":
+          return "homeinsurance";
+        case "LIFE":
+          return "lifeinsurance";
+        case "HEALTH":
+          return "healthinsurance";
+        default:
+          return "";
+      }
+    };
+    setType(determineType());
+  }, [location.state.type]);
+
+  useEffect(() => {
+    if (type) {
+      fetchUsers();
+      fetchPolicyData();
+    }
   }, [policyNo, type]);
 
   const fetchUsers = async () => {
@@ -53,17 +75,6 @@ const AcceptPolicyAgent = () => {
   const handleApproval = (status) => {
     const formData = new FormData();
     formData.append("status", status);
-    if (location.state.type === "TRAVEL") {
-      setType("travelinsurance");
-    } else if (location.state.type === "VEHICLE") {
-      setType("vehicleinsurance");
-    } else if (location.state.type === "HOME") {
-      setType("homeinsurance");
-    } else if (location.state.type === "LIFE") {
-      setType("lifeinsurance");
-    } else if (location.state.type === "HEALTH") {
-      setType("healthinsurance");
-    }
     axios.put(`${import.meta.env.VITE_URL}/${type}/approve/${policyNo}`, formData,
       {
         headers: {
