@@ -41,16 +41,17 @@ const Hero2 = () => {
     return (
         <div className='h-screen'>
             <Navbar />
-            <div className='p-10 h-full' style={{ backgroundImage: `url(${getBackgroundImage()})`,backgroundRepeat:'no-repeat' }}>
+            <div className='p-10 h-full ' style={{ backgroundImage: `url(${getBackgroundImage()})`,backgroundRepeat:'no-repeat' }}>
 
                 <div className='flex flex-row space-x-10 mt-10'>
                     <div className='header-1'>
-                        <h1 className='text-4xl text-orange-500 '>Secure <br /><span className='text-blue-400'>Insurance</span></h1>
+                        <h1 className='text-4xl text-orange-500 '>VTS <br /><span className='text-blue-400'>Insurance</span></h1>
                     </div>
                     <div className="border-2 h-20 border-slate-100"></div>
                     <div className='header-2'>
-                        <h1 className='text-xl text-blue-600'>PRITHVI, AGNI, JAL, AAKASH <br />
-                            <span className='text-black'>Sab Ki Suraksha Hamare Paas</span></h1>
+                    <h1 className='text-3xl text-blue-600'>Aapka vishvaas, <br />
+                            <span className='text-slate-700 '>hamari zimmedaari</span></h1>
+
                     </div>
                 </div>
 

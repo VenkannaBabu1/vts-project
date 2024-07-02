@@ -10,9 +10,9 @@ const Navbar = () => {
     
    <nav>
     <div className="wrapper">
-        <div className="logo">
-            <img src="https://orientalinsurance.org.in/static/media/oicl-logo.929a7ab1475dedd01b32.png" alt="" />
-            <a href="">Company</a>
+        <div className="logo" >
+            <img src="https://media.licdn.com/dms/image/D4E0BAQHIdgdBRY-q9A/company-logo_200_200/0/1714975480286/vts_enterprises_india_private_limited_logo?e=2147483647&v=beta&t=0hXdwCVYy7a-iG76DUGYrO5faw5pSgHsA3WLlAclGkY" alt="" style={{borderRadius:'20px'}}/>
+            <a href="">VTS Insurance</a>
         </div>
         <ul className="nav-links">
             <li>
