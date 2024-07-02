@@ -32,47 +32,48 @@ const token = localStorage.getItem("token");
     }
   };
 
-  const handleApproval =  (status) => {
+  const handleApproval = async (status) => {
     const formData = new FormData();
     formData.append("status", status);
-    if(location.state.type === "TRAVEL")
-      {
-        setType("travelinsurance")
-      }
-      else if(location.state.type === "VEHICLE")
+  
+    const typeMapping = {
+      TRAVEL: "travelinsurance",
+      VEHICLE: "vehicleinsurance",
+      HOME: "homeinsurance",
+      LIFE: "lifeinsurance",
+      HEALTH: "healthinsurance",
+    };
+  
+    const { type: policyType } = location.state;
+    const insuranceType = typeMapping[policyType];
+  
+    if (!insuranceType) {
+      toast.error("Invalid insurance type", { position: "top-center" });
+      return;
+    }
+  
+    try {
+      const response = await axios.put(
+        `${import.meta.env.VITE_URL}/${insuranceType}/approve/${policyNo}`,
+        formData,
         {
-          setType("vehicleinsurance")
+          headers: {
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data',
+          },
         }
-      else if(location.state.type === "HOME")
-        {
-          setType("homeinsurance")
-        }
-      else if(location.state.type === "LIFE")
-        {
-          setType("lifeinsurance")
-        }
-      else if(location.state.type === "HEALTH")
-          {
-            setType("healthinsurance")
-          }
-    const response = axios.put(`${import.meta.env.VITE_URL}/${type}/approve/${policyNo}`, formData,
-      {
-        headers: {
-
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'multipart/form-data',
-        }
-      }).then(res => {
-        console.log(res.data);
-        toast.success("Staus is updated successfully", {position:"top-center"});
+      );
+      console.log(response.data);
+      toast.success("Status is updated successfully", { position: "top-center" });
       setTimeout(() => {
         navigate('/agent-dashboard');
       }, 5000);
-      
-      }).catch(err => console.error(err));
-      
-
-  }
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to update status", { position: "top-center" });
+    }
+  };
+  
 
 
 
