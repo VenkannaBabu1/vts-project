@@ -1,19 +1,24 @@
-.main-contain {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+.main-contain-home {
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 100;
     font-size: 12px;
-    line-height: 30px;
+    line-height: 30px; */
     color: #777;
+    background: url(https://cdn.dribbble.com/users/646089/screenshots/11294179/media/fc659380419bf33b4408dc64837d6932.gif) right no-repeat,url(https://cdn.dribbble.com/users/677819/screenshots/4139500/untitled-1.gif) left;
+    background-size: contain;
+
+    /* padding-left: -100px; */
     /* background: #fff; */
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+   
   }
   
-  .container-Home {
+  .container-Home-policy {
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
     position: relative;
+
+    /* float: left; */
      
   }
   

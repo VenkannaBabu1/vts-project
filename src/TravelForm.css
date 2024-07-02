@@ -10,10 +10,10 @@
     /* border-radius:50px; */
     
     /* margin-top: 20px; */
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    
 }
 .travel{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background:url(https://i.pinimg.com/originals/9e/35/12/9e3512f7e3ea4aedc62c766d7eae0b58.gif);
     /* margin-top:10px; */
 }
 .travel-row {
@@ -23,15 +23,16 @@
 }
 
 .travel-card {
-    background: #F9F9F9;
-    box-shadow: 0 0 20px 0 rgba(2, 68, 247, 0.2), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
+    background: #f9f9f9a9;
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
     border-radius: 50px;
     /* margin-top:10px; */
 }
 
 .travel-card-body {
     padding: 20px;
-    padding-top:20px
+    padding-top:20px;
+    background: #f9f9f973;
 }
 
 .travel-text-center h1 {

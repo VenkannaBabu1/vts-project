@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import UserNav from '../AdminNav';
+import './HealthPolicyView.css';
+import Footer from '../Footer';
 
 
 function VehiclePolicyView() {
@@ -30,12 +33,13 @@ function VehiclePolicyView() {
         }
     }
     
-    return (
-        <div >
+    return (<div className="min-h-screen bg-gray-100">
+            <UserNav />
+        <div className='HealthPolicyView'>
              
-        <div className='container mt-4'>
+        <div className='container mt-0'>
            
-        <h2 className="text-center mb-4 text-white">VIEW ALL POLICIES</h2>
+        <h1 className="text-center mb-1 h1 text-black">VIEW ALL VEHICLE POLICIES</h1>
         
        
     
@@ -51,7 +55,6 @@ function VehiclePolicyView() {
                         <th> Vehicle Number</th>
                         <th> Vehicle Model </th>
                         <th>Status</th>
-
                     </tr>
                 </thead>
                 <tbody>{loading ? (
@@ -86,6 +89,8 @@ function VehiclePolicyView() {
                 
     </div>
             
+    </div>
+    <Footer/>
     </div>
 
         

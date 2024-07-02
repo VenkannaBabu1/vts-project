@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Footer from './Footer';
+import './AdminViewAllUsers.css';
+import UserNav from './AdminNav';
+
 
 function AdminViewAllUsers() {
     const [users, setUsers] = useState([]);
@@ -30,8 +34,10 @@ function AdminViewAllUsers() {
     }
 
     return (
-        <div>
-            <h2 className="text-center mb-4">ALL USERS</h2>
+        <div className="min-h-screen bg-gray-100">
+            <UserNav />
+        <div className='AdminViewAllUsers'>
+            <h1 className="text-center mb-1 h1 text-white">ALL USERS</h1>
             <div className='container mt-4 shadow p-3 text-center'>
                 <table className="table table-striped text-center pt-3">
                     <thead className='p-2'>
@@ -76,6 +82,8 @@ function AdminViewAllUsers() {
                     </tbody>
                 </table>
             </div>
+        </div>
+        <Footer/>
         </div>
     );
 }

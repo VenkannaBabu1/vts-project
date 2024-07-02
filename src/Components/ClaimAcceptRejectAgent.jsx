@@ -54,8 +54,8 @@ function ClaimAcceptReject() {
     return (
         <div className="min-h-screen bg-gray-100">
             <UserNav />
-            <div className='container-claim mt-4'>
-                <h2 className="text-center mb-4">CLAIM REQUESTS</h2>
+            <div className='container-claim mt-0'>
+                <h1 className="text-center mb-0 h1 text-black">CLAIM REQUESTS</h1>
                 <table className="table table-striped table-bordered text-center">
                     <thead>
                         <tr className='text-center'>

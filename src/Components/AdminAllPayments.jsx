@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Footer from "./Footer";
+import UserNav from './AdminNav';
+import './adminAllPayments.css';
+
 
 function AdminAllPayments() {
     const [requests, setRequests] = useState([]);
@@ -32,8 +36,10 @@ function AdminAllPayments() {
     }
 
     return (
-        <div>
-            <h2 className="text-center mb-4">ALL TRANSACTIONS</h2>
+        <div className="min-h-screen bg-gray-100">
+            <UserNav />
+        <div className='adminAllPayments'>
+            <h1 className="text-center mb-1 h1 text-black">ALL TRANSACTIONS</h1>
             <div className='container mt-4 shadow p-3 text-center'>
                 <table className="table table-striped text-center pt-3">
                     <thead className='p-2'>
@@ -80,6 +86,9 @@ function AdminAllPayments() {
                     </tbody>
                 </table>
             </div>
+        </div>
+        <Footer/>
+        
         </div>
     );
 }

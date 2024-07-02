@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Footer from '../Footer';
+import UserNav from '../AdminNav';
+import './HealthPolicyView.css';
 
 function LifePolicyView() {
     const [requests, setRequests] = useState([]);
@@ -31,9 +34,11 @@ function LifePolicyView() {
     }
 
     return (
-        <div>
-            <div className='container mt-4'>
-                <h2 className="text-center mb-4 text-white" >VIEW ALL POLICIES</h2>
+        <div className="min-h-screen bg-gray-100">
+            <UserNav />
+        <div className='HealthPolicyView'>
+            <div className='container mt-0'>
+                <h1 className="text-center mb-1 h1 text-black" >VIEW ALL LIFE POLICIES</h1>
                 <div className="row">
                     <table className="table table-striped table-bordered text-center">
                         <thead>
@@ -79,6 +84,8 @@ function LifePolicyView() {
                     </table>
                 </div>
             </div>
+        </div>
+        <Footer/>
         </div>
     );
 }

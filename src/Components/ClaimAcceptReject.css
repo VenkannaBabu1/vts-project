@@ -1,7 +1,14 @@
+.claimAcceptReject{
+    
+}
+
 .container-claim {
     margin: 0 auto;
     padding: 20px;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background: url(https://cdn.dribbble.com/users/130603/screenshots/5685838/ab_bookdemo_anim_dribbble.gif) center;
+    background-size: contain;
+    min-height: 100vh;
+    
     /* border-radius: 8px; */
 }
 

@@ -68,11 +68,11 @@ const HomeForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
     <UserNav />
 
-    <div className='main-contain'>
-      <div className="container-Home">
+    <div className='main-contain-home'>
+      <div className="container-Home-policy">
         <form id="contactus" onSubmit={handleSubmit}>
           <h3>HOME INSURANCE FORM</h3>
           <fieldset>

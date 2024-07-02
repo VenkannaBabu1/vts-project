@@ -84,7 +84,7 @@ function TravelForm() {
       <div className="travel-main-container">
         <div className="travel-row">
           <div className="travel-card mx-auto">
-            <div className="travel-card-body bg-light">
+            <div className="travel-card-body ">
               <div className="travel-container">
                 <form id="contact-form" role="form" onSubmit={handleSubmit}>
                   <div className="travel-text-center">

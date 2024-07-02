@@ -1,15 +1,18 @@
 .vehicle{
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    /* background: rgb(2,0,36); */
+    background: url(https://www.shriramgi.com/bundle/assets/images/product/car-renewal/gif/ANIM_1.gif) center no-repeat;
+    background-size: cover;
 }
 
 .travel-main-container-vehicle {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     max-width: 600px;
     margin: 0 auto;
+    background: #f9f9f9b1;
+
     /* margin-top: 20px; */
     /* background: rgb(2,0,36); */
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+   
 }
 
 .travel-row {
@@ -17,8 +20,8 @@
 }
 
 .travel-card {
-    background: #F9F9F9;
-    box-shadow: 0 0 20px 0 rgba(2, 68, 247, 0.2), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
+    background: #f9f9f97e;
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0), 0 5px 5px 0 rgba(2, 10, 240, 0.24);
     border-radius: 10px;
 }
 
@@ -27,6 +30,7 @@
     /* margin-top:20px; */
     /* height:400px; */
     min-height:1000;
+    background:rgba(250, 243, 243, 0.662) 255, 255, 0.78);
 
     
 }

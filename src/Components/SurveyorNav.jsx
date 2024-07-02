@@ -54,7 +54,7 @@ const SurveyorNav = () => {
             </ul>
         </div>
           <div className="btn">
-            <button className='hover:bg-white hover:text-blue-500 p-2 rounded-md' onClick={()=> { localStorage.removeItem('token'), navigate('/')}}>Log Out</button>
+            <button className='hover:bg-blue-500 p-2 rounded-md  text-white p-2 rounded-md' onClick={()=> { localStorage.removeItem('token'), navigate('/')}}>Log Out</button>
           </div>
     </div>
   )

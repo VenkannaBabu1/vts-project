@@ -3,6 +3,7 @@ import './AddPolicy.css';
 import axios from 'axios';
 import Footer from "./Footer";
 import UserNav from './AdminNav';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -22,6 +23,7 @@ const AddPolicy = () => {
       [name]: value
     });
   };
+  const navigate=useNavigate();
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -48,8 +50,9 @@ const AddPolicy = () => {
       premium: '',
       description: ''
     });
-      alert('Successfullly ');
-    alert('register successful! ,Please login', {});
+      
+    alert('policy added successfully! ,Please check the policies');
+    alert(navigate('/view-all-policies'));
     
   } catch (error) {
     console.error('Error adding data:', error);
@@ -61,10 +64,11 @@ const AddPolicy = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100" style={{background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)"}}>
+    <div className="min-h-screen bg-gray-100" >
             <UserNav />
-    <div className='AdminDashboardForm'>
-      <h2>Premium Registration Form</h2>
+            <div className='add-policy'>
+    <div className='AdminDashboardForm '>
+      <h1 className="text-center mb-4 h1 text-black px-2 ml-2">Policy Registration Form</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="type">Type:</label>
@@ -128,6 +132,7 @@ const AddPolicy = () => {
         </div>
         <button className='admin-dashboard-form button' type="submit">Submit</button>
       </form>
+    </div>
     </div>
     <Footer />
         </div>

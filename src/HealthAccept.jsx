@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Footer from "./Components/Footer";
+import UserNav from './Components/SurveyorNav';
+import './approval.css';
 
 function HealthAccept() {
     const token = localStorage.getItem('token');
@@ -35,9 +38,11 @@ function HealthAccept() {
 
 
 
-    return (
-        <div className='container mt-4 shadow'>
-        <h2 className="text-center mb-4">APPLIED HEALTH POLICIES</h2>
+    return ( <div className="min-h-screen bg-gray-100">
+            <UserNav />
+    <div className='approval'>
+        <div className='container mt-0 shadow'>
+        <h1 className="text-center h1 mb-4 text-black">APPLIED HEALTH POLICIES</h1>
        
             
             <table className="table table-striped text-center">
@@ -85,6 +90,9 @@ function HealthAccept() {
                   )}
                 </tbody>
             </table>
+        </div>
+        </div>
+        <Footer/>
         </div>
     );
 }

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Footer from "./Components/Footer";
+import UserNav from './Components/SurveyorNav';
+import './approval.css';
 
 function TravelAccept() {
     const [requests, setRequests] = useState([]);
@@ -32,8 +35,11 @@ function TravelAccept() {
 
 
     return (
-        <div className='container mt-4 shadow'>
-            <h2 className="text-center mb-4"></h2>
+        <div className="min-h-screen bg-gray-100">
+            <UserNav />
+    <div className='approval'>
+        <div className='container mt-0 shadow'>
+            <h1 className="text-center h1 mb-1 text-black"> Appliedd Travel Policies</h1>
            
                 
                 <table className="table table-striped text-center">
@@ -55,8 +61,11 @@ function TravelAccept() {
                         </tr>
                     </thead>
                     <tbody>
-
-                        {requests && requests.map((req, index) =>
+                  {loading ? (
+                    <tr><td colSpan={9}>loading Data.....</td></tr>
+                  ):( 
+                    requests.length >0 ?(
+                        requests.map((req, index) =>
                             <tr key={req.id} >
                                 <td style={{verticalAlign:"middle"}}>{index + 1}</td>
                                 <td style={{verticalAlign:"middle"}}>{req.email}</td>
@@ -80,10 +89,16 @@ function TravelAccept() {
                                           </tr>
                                                                   
                            
-                        )}
-                    </tbody>
+                                        )):(
+                                            <tr><td colSpan={13}>NO Data Found</td></tr>
+                                          )
+                                        )}</tbody>
                 </table>
-            </div>
+                </div>
+                </div>
+                <Footer/>
+                </div>
+
         
     );
 }

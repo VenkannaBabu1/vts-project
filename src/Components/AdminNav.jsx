@@ -7,7 +7,7 @@ const AdminNav = () => {
     <div className='flex flex-row bg-[#1869b0] text-white justify-around p-4 text-[20px] items-center'>
       <div className="navbar flex flex-row items-center space-x-5">
         <img src="https://media.licdn.com/dms/image/D4E0BAQHIdgdBRY-q9A/company-logo_200_200/0/1714975480286/vts_enterprises_india_private_limited_logo?e=2147483647&v=beta&t=0hXdwCVYy7a-iG76DUGYrO5faw5pSgHsA3WLlAclGkY" alt=""  style={{borderRadius:'20px',width:50}} />
-        <h1>VTS Insurance</h1>
+        <h1>VTS Insurance  </h1>
       </div>
       <div className='nav-items'>
         <ul className='flex flex-row space-x-20'>
@@ -15,7 +15,7 @@ const AdminNav = () => {
           <li><button onClick={() => navigate("/view-all-policies")}>All Policies</button></li>
           <li><button onClick={() => navigate("/ClaimAcceptReject")}>All Claims</button></li>
           */}
-          <li><Link to="/add-policy">Add Policies</Link></li>
+          <li><Link to="/add-policy">.  Add Policies</Link></li>
           <li><Link to="/view-all-policies">All Policies</Link></li>
           <li><Link to="/ClaimAcceptReject">All Claims</Link></li>
           <li><Link to="/all-payments">All Payments</Link></li>
@@ -53,7 +53,7 @@ const AdminNav = () => {
         </div>
       <div className="btn">
         <button
-          className='hover:bg-white hover:text-blue-500 p-2 rounded-md'
+          className='hover:bg-blue-500 p-2 rounded-md  text-white p-2 rounded-md'
           onClick={() => {
             localStorage.removeItem('token');
             navigate('/');
