@@ -79,9 +79,9 @@ function AllPolicies() {
         <ul ref={slider} >
           {policies.map((policy, index) => (
             <li key={index}>
-              <div className="slide-card mb-5 ">
+              <div className="slide-card mb-2 ">
                 <div className="user-info">
-                  <div className="mt-5 ">
+                  <div className="mt-2 mb-0 ">
                     <h1 className="policy-name text-[20px] text-slate-600 font-bold">
                       {policy.policyName}
                     </h1>
@@ -95,15 +95,15 @@ function AllPolicies() {
                 </div>
                 <hr className="w-full border-1 border-slate-800" />
                 <div className="bg-blue-100 mt-3 px-1 py-1 rounded-xl">
-                  <h3 className="mt-6 text-[14px]">
+                  <h3 className="mt-1 mb-1 text-[14px]">
                     COVERAGE: <span className="text-orange-500">{policy.coverage}</span>
                   </h3>
                 </div>
-                <div className="items-start space-x-2 bg-blue-100 rounded-xl px-2 mt-4 p-1">
-                  <h3 className="text-[11px] font-semibold ml-5">
+                <div className="items-start space-x-2 bg-blue-100 rounded-xl px-2 mt-3 p-1">
+                  <h3 className="text-[11.5px] font-semibold ml-1">
                     TERMS AND CONDITIONS:
                   </h3>
-                  <span className="text-[12px] text-left">{policy.description}</span>
+                  <span className="space-x-2 w-full  text-[11px] px-2 mb-5">{policy.description}</span>
                 </div>
                 <button
                   className="sea w-[150px] ml-6 hover:bg-orange-500 hover:text-white rounded-xl"

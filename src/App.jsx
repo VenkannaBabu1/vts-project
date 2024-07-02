@@ -102,7 +102,7 @@ function App() {
     
     <Route path="life-applications" element={<LifeApplications/>}/>
     <Route path="vehicles" element={<VehicleApplications/>}/>
-    <Route path = "rejectadmin" element={<RejectedClaimsAdmin/>}/>
+    <Route path ="rejectadmin" element={<RejectedClaimsAdmin/>}/>
     <Route path="my-policies" element={<MyPolicieUser/>}/>
     <Route path="agentviewclaims" element={<AgentClaimApproval/>}/>
     <Route path="ClaimAcceptReject" element={<ClaimAcceptReject/>}/>
