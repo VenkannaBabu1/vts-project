@@ -119,15 +119,15 @@ function FeedbackForm() {
     const feedback_opts = ['Excellent', 'Good', 'Fair', 'Bad'];
     
     return (
-        <div >
+        <div  className='vh-100'>
 
             <UserNav/>
 
             {/* <StickyHeader/> */}
         
-        <Container  className='min-w-100'>
+        <Container  className='container' style={{width:"1000px"}}>
             {displayform ?
-            (<Card className="d-flex form-feedback container-fluid w-100 grid-flow-row  ">
+            (<Card className="d-flex form-feedback container-fluid w-100 grid-flow-row mx-1000 " >
                 <Card.Header>
                     <cite title="Source Title">We are committed to providing you with the best
                         experience possible, so we welcome your comments.

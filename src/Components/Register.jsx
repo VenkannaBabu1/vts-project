@@ -171,7 +171,7 @@ const Register = () => {
               rules={[
                 { required: true, message: 'Please input your first name!' },
                 {
-                  pattern: /^[A-Za-z]+$/,
+                  pattern: /^[A-Za-z\s]+$/,
                   message: 'Only alphabetic characters are allowed!',
                 },
               ]}

@@ -11,10 +11,11 @@
     align-items: center;
     min-height: 100vh;
   
-    background: url(https://www.slreforms.org/public/frontend/images/reg.gif) center no-repeat;
+    background: url(https://www.slreforms.org/public/frontend/images/reg.gif) center no-repeat ,linear-gradient(to  top,rgb(77, 114, 235),white);
     background-size: contain;
     padding-top: 18px;
     padding-bottom: 18px;
+
     
     }
   
@@ -25,7 +26,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.996);
     max-width: 800px;
     width: 100%;
-    
+    border: none;
   
 
 
@@ -65,7 +66,7 @@
   .form-item textarea {
     width: 100%;
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #aca9a9;
     border-radius: 5px;
   }
   
