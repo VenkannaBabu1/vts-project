@@ -45,7 +45,8 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-   
+    border: none;
+    background-color: aliceblue;
    
   }
   
