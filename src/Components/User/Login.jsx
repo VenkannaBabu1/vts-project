@@ -43,7 +43,7 @@ const Login = () => {
                 localStorage.setItem('username', res.data.username);  
                 toast.success("Form submitted successfully");
                 if (res.data.role === "ROLE_USER") {
-                    navigate('/user-dashboard');
+                    navigate('/user-all-policies');
                 } else if (res.data.role === "ROLE_ADMIN") {
                     navigate('/admin-dashboard');
                 } else if (res.data.role === "ROLE_AGENT") {

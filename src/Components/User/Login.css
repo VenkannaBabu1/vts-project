@@ -3,14 +3,14 @@
 
 
 .container-login {
-    background: url('https://www.policybazaar.com/pblife/assets/images/pb_life_Pay_As_YOu_Drive_Motor_insurance_Policybazaar_1589379102.gif');
+    background: url(https://lordicon.com/icons/wired/lineal/310-avatar-icon-approved.svg) right top,url(https://www.truid.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftruid-usecases.90d0a50f.gif&w=828&q=75) left  ;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 .error-message {

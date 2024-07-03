@@ -17,7 +17,7 @@
 }
 
 nav {
-    background-color:#68aaec;
+    background:linear-gradient(to right, #142b92,rgba(27, 126, 247, 0.889));
     color: white;
     padding: 10px 20px;
 }
