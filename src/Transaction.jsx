@@ -3,6 +3,9 @@ import React, { useEffect, useState } from 'react';
 import './Rejected.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import Footer from './Components/Footer';
+// import Footer from "./Footer";
+import UserNav from './Components/SurveyorNav';
 
 const AcceptPolicyAgent = () => {
   const [data, setData] = useState([]);
@@ -91,9 +94,11 @@ const AcceptPolicyAgent = () => {
   };
 
   return (
-    <div className=''>
-      <h1 className='text-center'>POLICY TRANSACTIONS APPROVAL</h1>
-      <div className="container shadow-sm mt-3">
+    <div className="min-h-screen bg-gray-100 " >
+            <UserNav />
+    <div className='' >
+      <h1 className='text-center h1 '>POLICY TRANSACTIONS APPROVAL</h1>
+      <div className="container shadow-sm mt-3 vh-100">
         <table className='table table-striped text-center'>
           <thead>
             <tr>
@@ -144,6 +149,8 @@ const AcceptPolicyAgent = () => {
         </table>
         <ToastContainer />
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 };

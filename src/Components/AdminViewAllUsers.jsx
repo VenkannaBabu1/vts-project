@@ -37,7 +37,7 @@ function AdminViewAllUsers() {
         <div className="min-h-screen bg-gray-100">
             <UserNav />
         <div className='AdminViewAllUsers'>
-            <h1 className="text-center mb-1 h1 text-white">ALL USERS</h1>
+            <h1 className="text-center mb-1 h1 text-black">ALL USERS</h1>
             <div className='container mt-4 shadow p-3 text-center'>
                 <table className="table table-striped text-center pt-3">
                     <thead className='p-2'>

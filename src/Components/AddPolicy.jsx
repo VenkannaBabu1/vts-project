@@ -67,7 +67,7 @@ const AddPolicy = () => {
     <div className="min-h-screen bg-gray-100" >
             <UserNav />
             <div className='add-policy'>
-    <div className='AdminDashboardForm '>
+    <div className='AdminDashboardForm mt-10'>
       <h1 className="text-center mb-4 h1 text-black px-2 ml-2">Policy Registration Form</h1>
       <form onSubmit={handleSubmit}>
         <div>

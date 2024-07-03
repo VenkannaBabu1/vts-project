@@ -132,6 +132,19 @@ function UserProfile() {
                       </div>
                       <div className="profile-col-md-6">
                         <div className="profile-form-group">
+                          <label htmlFor="adhaarPan">AadharPan</label>
+                          <input
+                            id="adhaarPan"
+                            type="text"
+                            name="adhaarPan"
+                            className="profile-form-control"
+                            value={profile.adhaarPan}
+                            readOnly
+                          />
+                        </div>
+                      </div>
+                      {/* <div className="profile-col-md-6">
+                        <div className="profile-form-group">
                           <label htmlFor="gender">Gender</label>
                           <input
                             id="gender"
@@ -142,10 +155,10 @@ function UserProfile() {
                             readOnly
                           />
                         </div>
-                      </div>
+                      </div> */}
                     </div>
-                    <div className="profile-row mb-3">
-                      <div className="profile-col-md-6">
+                    <div className="profile-row mb-3 m-3">
+                      <div className="profile col-md-12">
                         <div className="profile-form-group">
                           <label htmlFor="address">Address</label>
                           <input
@@ -158,19 +171,7 @@ function UserProfile() {
                           />
                         </div>
                       </div>
-                      <div className="profile-col-md-6">
-                        <div className="profile-form-group">
-                          <label htmlFor="adhaarPan">AadharPan</label>
-                          <input
-                            id="adhaarPan"
-                            type="text"
-                            name="adhaarPan"
-                            className="profile-form-control"
-                            value={profile.adhaarPan}
-                            readOnly
-                          />
-                        </div>
-                      </div>
+                      
                     </div>
                     <div className="profile-row mb-3">
                       <div className="profile-col-md-6">

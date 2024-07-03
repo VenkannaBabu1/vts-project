@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import UserNav from './Components/UserNav';
 
 const UserClaimStatus = () => {
+  
   const [data, setData] = useState([]);
   const [expandedCardId, setExpandedCardId] = useState(null);
 
