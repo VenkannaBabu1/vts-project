@@ -1,8 +1,9 @@
-/* General Styles */
+
 .info {
     display: flex;
     justify-content: space-between;
     background-color: #f8f8f8;
+    
     padding: 10px 20px;
     font-size: 14px;
 }
@@ -16,7 +17,7 @@
 }
 
 nav {
-    background-color:#1869b0;
+    background-color:#68aaec;
     color: white;
     padding: 10px 20px;
 }
@@ -173,7 +174,6 @@ nav {
     display: block;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;

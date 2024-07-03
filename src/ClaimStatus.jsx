@@ -32,7 +32,7 @@ const UserClaimStatus = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
       <UserNav />
       <div className="users-list">
         <h1 className="text-center mb-4 h1 text-black">User Claim Status</h1>

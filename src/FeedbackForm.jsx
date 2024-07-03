@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
+import { Col, InputGroup, Row } from 'react-bootstrap';
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import { InputGroup, Row } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import {Col} from 'react-bootstrap';
-import 'react-phone-number-input/style.css';
 import PhoneInput from 'react-phone-number-input';
-import Alert from 'react-bootstrap/Alert';
-import StickyHeader from './Header';
-import './custom.css';
-import UserNav from './Components/UserNav';
+import 'react-phone-number-input/style.css';
 import Footer from './Components/Footer';
+import UserNav from './Components/UserNav';
+import './custom.css';
 
 function FeedbackForm() {
     const [displayform, setDisplay] = useState(true)
@@ -121,33 +119,34 @@ function FeedbackForm() {
     const feedback_opts = ['Excellent', 'Good', 'Fair', 'Bad'];
     
     return (
-        <div>
-            <UserNav />
+        <div >
 
-            <StickyHeader />
+            <UserNav/>
+
+            {/* <StickyHeader/> */}
         
-        <Container>
-            {displayform ? 
-            (<Card>
+        <Container  className='min-w-100'>
+            {displayform ?
+            (<Card className="d-flex form-feedback container-fluid w-100 grid-flow-row  ">
                 <Card.Header>
                     <cite title="Source Title">We are committed to providing you with the best
-                         experience possible, so we welcome your comments.
+                        experience possible, so we welcome your comments.
                     </cite>
                 </Card.Header>
                 <Card.Body>
-                    <blockquote className="blockquote mb-0">
+                    <blockquote className="blockquote mb-0 ">
                     Please fill this feedback form. 
                     </blockquote>
                     
                 </Card.Body>
-                <Container className='padding30px'>
+                <Container className='p-1 w-100'>
                     <Form>
                         <Row>
                             <Col>
                                 
                                 <Form.Group className="mb-3" controlId="formBasicEmail">
                                     <Form.Label className='required-field'>Name</Form.Label>
-                                    <Form.Control type="text" required placeholder="E.g. Yeshwanth Atyam" value={nm_value} onChange={e => setNmValue(e.target.value)} />
+                                    <Form.Control type="text" required placeholder="E.g. your name" value={nm_value} onChange={e => setNmValue(e.target.value)} />
                                     
                                 </Form.Group>
                                 <Alert variant='danger' id='name_er'>
@@ -238,6 +237,7 @@ function FeedbackForm() {
             )}  
             
         </Container>
+        
         <Footer />
         </div>
     );
