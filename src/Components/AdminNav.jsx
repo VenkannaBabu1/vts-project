@@ -15,11 +15,11 @@ const AdminNav = () => {
           <li><button onClick={() => navigate("/view-all-policies")}>All Policies</button></li>
           <li><button onClick={() => navigate("/ClaimAcceptReject")}>All Claims</button></li>
           */}
-          <li><Link to="/add-policy">.  Add Policies</Link></li>
-          <li><Link to="/view-all-policies">All Policies</Link></li>
-          <li><Link to="/ClaimAcceptReject">All Claims</Link></li>
-          <li><Link to="/all-payments">All Payments</Link></li>
-          <li><Link to="/view-all-users">All Users</Link></li>
+          <li><Link to="/add-policy" className='text-white'>  Add Policies</Link></li>
+          <li><Link to="/view-all-policies" className='text-white'>All Policies</Link></li>
+          <li><Link to="/ClaimAcceptReject" className='text-white'>All Claims</Link></li>
+          <li><Link to="/all-payments" className='text-white'>All Payments</Link></li>
+          <li><Link to="/view-all-users" className='text-white'>All Users</Link></li>
         </ul>
       </div>
       <div className="login">
