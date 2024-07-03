@@ -7,7 +7,7 @@ import  TravelForm from "./TravelForm"
 import AdminDashboard from "./Components/AdminDashboard";
 import SurveyorDashboard from "./Components/SurveyorDashboard";
 
-// import RegistrationPage from "./Components/RegistrationPage";
+
 import HomeForm from "./Components/HomeForm";
 import Claims from "./Claims"
 import ClaimStatus from "./ClaimStatus";
@@ -47,6 +47,8 @@ import HomePolicyView from "./Components/AdminViewPolicy/HomePolicyView";
 import LifePolicyView from "./Components/AdminViewPolicy/LifePolicyView";
 import VehiclePolicyView from "./Components/AdminViewPolicy/VehiclePolicy";
 import TravelPolicyView from "./Components/AdminViewPolicy/TravelPolicyView";
+import FeedbackForm from "./FeedbackForm";
+import Submissions from "./Submissons";
 export const Store = createContext();
 function App() {
   const [tokenDetails, setTokenDetails] = useState(
@@ -109,6 +111,8 @@ function App() {
     <Route path="ClaimAcceptRejectAgent" element={<ClaimAcceptRejectAgent/>}/>
     <Route path="transaction" element={<AcceptPolicyAgent />}  />
     <Route path="edit-policy" element={<EditPolicy/>} />
+    <Route path="/user-feedback" element={<FeedbackForm/>} />
+    <Route path="/submissions" element={<Submissions />} />
     
     </Routes>
    </BrowserRouter>

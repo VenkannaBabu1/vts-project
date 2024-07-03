@@ -78,7 +78,7 @@
     /* padding-right:20px ; */
 }
 
-input[type="email"], input[type="password"] {
+.container-login input[type="email"], input[type="password"] {
     height: 45px;
     width: 100%;
     border: none;

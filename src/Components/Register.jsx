@@ -324,7 +324,7 @@ const Register = () => {
               hasFeedback
               className='form-item'
             >
-              <Input.Password placeholder="Enter your password" />
+              <Input.Password placeholder="Enter your password"  className='pwd-input'/>
             </Form.Item>
 
             <Form.Item
@@ -345,7 +345,7 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <Input.Password placeholder="Confirm your password" />
+              <Input.Password placeholder="Confirm your password"  className='pwd-input'/>
             </Form.Item>
           </div>
 
