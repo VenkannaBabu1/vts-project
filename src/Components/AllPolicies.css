@@ -4,12 +4,12 @@
   margin: 0 auto;
   overflow: hidden;
   background: rgb(2,0,36);
-  background:url(https://onebron.com/wp-content/uploads/2022/02/966-privacy-policy-outline.gif) left   repeat ,url(https://polimexgroup.com/cdn-cgi/image/quality%3D85/assets/images/animation_300_kp84tg55.gif)   right  repeat;
+  background:url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/30276527001997.55ce46303cee8.gif) left   repeat ;
   padding: 50px 50px; 
   /* padding-top: 100px; */
   height: 100%;
   margin-top: 50px;
-  background-size:contain;
+  background-size:auto;
   /* background-repeat: no-repeat; */
 }
 
