@@ -95,6 +95,7 @@ function App() {
 
     <Route path="payment" element={<PaymentPage/> }/>
     <Route path="user-payments" element={<UserPayments/> }/>
+    
 
     <Route path="claimstatus" element={<ClaimStatus/>}/>
 

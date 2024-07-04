@@ -49,7 +49,7 @@ const MyPolicieUser = () => {
 
   const handleClaim = (policyId, policyNo, policyName) => {
     console.log(`Claiming for policy with No: ${policyNo}`);
-    navigate("/claims", { state: { policyId: policyId, policyNo: policyNo, policyName : policyName} });
+    navigate("/claims", { state: { policyId: policyId, policyNo: policyNo, policyName :policyName} });
     
   };
 

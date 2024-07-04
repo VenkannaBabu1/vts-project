@@ -267,7 +267,7 @@ const Register = () => {
               label="Phone Number"
               rules={[
                 { required: true, message: 'Please input your phone number!' },
-                { len: 10, message: 'Phone number must contain 10 digits' },
+                { pattern: /^[0-9]+$/, len: 10, message: 'Phone number must contain 10 digits and must not contain any characters' },
               ]}
               className='form-item'
             >

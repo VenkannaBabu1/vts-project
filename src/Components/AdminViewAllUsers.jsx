@@ -45,7 +45,7 @@ function AdminViewAllUsers() {
                             <th>S.No</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Date of Birth</th>
+                            <th>DOB</th>
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Gender</th>

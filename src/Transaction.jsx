@@ -106,6 +106,8 @@ const AcceptPolicyAgent = () => {
               <th>Policy Name</th>
               <th>Policy Id</th>
               <th>Policy No</th>
+             
+              <th>Amount</th>
               <th>Transaction Id</th>
               <th>Reference Id</th>
               <th>Image Proof</th>
@@ -119,6 +121,7 @@ const AcceptPolicyAgent = () => {
                 <td>{user.policyName}</td>
                 <td>{user.policyId}</td>
                 <td>{user.policyNo}</td>
+                <td >{user.amount}</td>
                 <td>{user.transactionId}</td>
                 <td>{user.referenceId}</td>
                 <td>
