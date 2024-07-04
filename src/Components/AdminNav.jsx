@@ -11,7 +11,7 @@ const AdminNav = () => {
       </div>
       <div className='nav-items'>
         <ul className='flex flex-row space-x-20'>
-          {/* <li><button onClick={() => navigate("/add-policy")}>Add Policies</button></li>
+          {/* <li><button onClick={() => navigate("/add-policy")}>&nbsp;&nbsp;Add Policies</button></li>
           <li><button onClick={() => navigate("/view-all-policies")}>All Policies</button></li>
           <li><button onClick={() => navigate("/ClaimAcceptReject")}>All Claims</button></li>
           */}
