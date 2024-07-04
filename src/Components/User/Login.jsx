@@ -81,7 +81,7 @@ const Login = () => {
                         <div className="input-text">
                             <div className='in'>
                                 <input
-                                    // style={{border:"none"}}
+                                    style={{border:"none"}}
                                     type="email"
                                     placeholder="Enter your email"
                                     value={inputText.email}
@@ -97,7 +97,7 @@ const Login = () => {
                         <div className="input-text">
                             <div className='input-text-2'>
                                 <input
-                                    // style={{border:"none"}}
+                                    style={{border:"none"}}
                                     type={passwordVisibility}
                                     placeholder="Enter your password"
                                     value={inputText.password}
