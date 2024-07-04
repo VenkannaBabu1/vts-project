@@ -210,6 +210,7 @@ const Register = () => {
 
             <Form.Item
               name="dob"
+              style={{border:"none"}}
               label="Date of Birth"
               rules={[
                 { required: true, message: 'Please input your date of birth!' },
@@ -217,18 +218,18 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <DatePicker format="DD-MM-YYYY" style={{ width: '100%' }} placeholder="Select Date of Birth" />
+              <DatePicker format="DD-MM-YYYY" style={{ width: '100%',border:"none" ,backgroundColor:"aliceblue" }} placeholder="Select Date of Birth" />
             </Form.Item>
           </div>
-          <div className="form-input">
+          <div className="form-input"  >
             <Form.Item
               name="gender"
               label="Gender"
-              rules={[{ required: true, message: 'Please select your gender!' }]}
-              className='form-item'
+              rules={[{ required: true, message: 'Please select your gender!' }] }
+              className='form-item' 
             >
-              <Select name="gender" placeholder="Select your gender">
-                <Option value="male">Male</Option>
+              <Select name="gender"  placeholder="Select your gender"  style={{ border:"none" ,backgroundColor:"aliceblue" }}>
+                <Option style={{ border:"none" ,backgroundColor:"aliceblue" }} value="male">Male</Option>
                 <Option value="female">Female</Option>
                 <Option value="other">Other</Option>
               </Select>
@@ -274,14 +275,14 @@ const Register = () => {
             </Form.Item>
           </div>
 
-          <div className="form-input">
+          <div className="form-input" >
             <Form.Item
               name="address"
               label="Address"
               rules={[{ required: true, message: 'Please input your address!' }]}
               className='form-item'
             >
-              <Input.TextArea showCount maxLength={200} placeholder="Enter your address" />
+              <Input.TextArea showCount maxLength={200} placeholder="Enter your address" style={{ border:"none" ,backgroundColor:"aliceblue" }} />
             </Form.Item>
           </div>
           <div className="form-input">
@@ -291,7 +292,7 @@ const Register = () => {
               rules={[{ required: true, message: 'Please select ID type!' }]}
               className='form-item'
             >
-              <Radio.Group onChange={handleIdTypeChange} value={idType}>
+              <Radio.Group onChange={handleIdTypeChange} value={idType} >
                 <Radio value="adhaar">Aadhar</Radio>
                 <Radio value="pan">PAN</Radio>
               </Radio.Group>
@@ -306,7 +307,7 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <Input placeholder={`Enter your ${idType} number`} />
+              <Input placeholder={`Enter your ${idType} number`} style={{ border:"none" ,backgroundColor:"aliceblue" }} />
             </Form.Item>
           </div>
 
@@ -324,7 +325,7 @@ const Register = () => {
               hasFeedback
               className='form-item'
             >
-              <Input.Password placeholder="Enter your password"  className='pwd-input'/>
+              <Input.Password placeholder="Enter your password"  className='pwd-input' style={{ border:"none" ,backgroundColor:"aliceblue" }}/>
             </Form.Item>
 
             <Form.Item
@@ -345,7 +346,7 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <Input.Password placeholder="Confirm your password"  className='pwd-input'/>
+              <Input.Password placeholder="Confirm your password"  className='pwd-input' style={{ border:"none" ,backgroundColor:"aliceblue" }}/>
             </Form.Item>
           </div>
 
