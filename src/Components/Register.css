@@ -11,7 +11,7 @@
     align-items: center;
     min-height: 100vh;
   
-    background: url(https://www.slreforms.org/public/frontend/images/reg.gif) center no-repeat ,linear-gradient(to  top,rgb(77, 114, 235),white);
+    background: url() center no-repeat ,linear-gradient(to  top,rgb(77, 114, 235),white);
     background-size: contain;
     padding-top: 18px;
     padding-bottom: 18px;
