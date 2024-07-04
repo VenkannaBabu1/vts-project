@@ -127,7 +127,7 @@ function FeedbackForm() {
         
         <Container  className='container' style={{width:"1000px"}}>
             {displayform ?
-            (<Card className="d-flex form-feedback container-fluid w-100 grid-flow-row mx-1000 " >
+            (<Card className="d-flex form-feedback container-fluid w-100 grid-flow-row mx-100 " style={{maxWidth:"600px"}}>
                 <Card.Header>
                     <cite title="Source Title">We are committed to providing you with the best
                         experience possible, so we welcome your comments.

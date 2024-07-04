@@ -25,7 +25,7 @@ const WhyChoose = () => {
   ];
 
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 " id='about'>
       <div className="text-center mb-8">
         <h1 className="font-bold text-3xl mb-4">Why Choose VTS Insurance</h1>
         <p className="text-lg mb-2">We protect you, your future and the things you care about!!</p>

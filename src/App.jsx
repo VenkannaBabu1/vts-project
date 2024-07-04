@@ -49,6 +49,7 @@ import VehiclePolicyView from "./Components/AdminViewPolicy/VehiclePolicy";
 import TravelPolicyView from "./Components/AdminViewPolicy/TravelPolicyView";
 import FeedbackForm from "./FeedbackForm";
 import Submissions from "./Submissons";
+import WhyChoose from "./Components/WhyChoose";
 export const Store = createContext();
 function App() {
   const [tokenDetails, setTokenDetails] = useState(
@@ -101,6 +102,7 @@ function App() {
     <Route path="travel-applications" element={<TravelAccept/>}/>
     <Route path="health-applications" element={<HealthAccept/>}/>
     <Route path="home-applications" element={<HomeAccept/>}/>
+    <Route path="whychooseus" element={<WhyChoose/>}/>
     
     <Route path="life-applications" element={<LifeApplications/>}/>
     <Route path="vehicles" element={<VehicleApplications/>}/>

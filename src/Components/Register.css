@@ -45,20 +45,15 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    
-   
   }
-  
   .form-item {
     flex: 1;
     margin-bottom: 5px;
     margin-right: 10px;
-   
   }
   
   .form-item label {
     float: left;
-   
   }
   
   .form-item input,
