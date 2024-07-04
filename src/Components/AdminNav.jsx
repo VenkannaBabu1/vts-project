@@ -7,7 +7,7 @@ const AdminNav = () => {
     <div className='flex flex-row bg-[#1869b0] text-white justify-around p-4 text-[20px] items-center'>
       <div className="navbar flex flex-row items-center space-x-5">
         <img src="https://media.licdn.com/dms/image/D4E0BAQHIdgdBRY-q9A/company-logo_200_200/0/1714975480286/vts_enterprises_india_private_limited_logo?e=2147483647&v=beta&t=0hXdwCVYy7a-iG76DUGYrO5faw5pSgHsA3WLlAclGkY" alt=""  style={{borderRadius:'20px',width:50}} />
-        <h1>VTS Insurance  </h1>
+        <h1>VTS Insurance  </h1> &nbsp;&nbsp;
       </div>
       <div className='nav-items'>
         <ul className='flex flex-row space-x-20'>
