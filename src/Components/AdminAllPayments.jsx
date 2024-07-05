@@ -41,6 +41,7 @@ function AdminAllPayments() {
         <div className='adminAllPayments'>
             <h1 className="text-center mb-1 h1 text-black">ALL TRANSACTIONS</h1>
             <div className='container mt-4 shadow p-3 text-center'>
+            <div className="overflow-x-auto">
                 <table className="table table-striped text-center pt-3">
                     <thead className='p-2'>
                         <tr className='text-center p-4'>
@@ -85,6 +86,7 @@ function AdminAllPayments() {
                         )}
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         <Footer/>
