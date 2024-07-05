@@ -52,7 +52,7 @@ const AddPolicy = () => {
     });
       
     alert('policy added successfully! ,Please check the policies');
-    alert(navigate('/view-all-policies'));
+    navigate('/view-all-policies');
     
   } catch (error) {
     console.error('Error adding data:', error);

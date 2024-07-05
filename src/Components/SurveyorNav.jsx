@@ -6,7 +6,7 @@ const SurveyorNav = () => {
 
   const navigate=useNavigate();
   return (
-    <div className='flex flex-row bg-[#1869b0] text-white justify-around p-4 text-[20px] items-center'>
+    <div className='flex flex-row  text-white justify-around p-4 text-[20px] items-center' style={{ background: 'linear-gradient(to right, #6fc0e1,rgba(15, 24, 299, 0.8))' }}>
         <div className="navbar flex flex-row items-center space-x-5">
                 <img src="https://media.licdn.com/dms/image/D4E0BAQHIdgdBRY-q9A/company-logo_200_200/0/1714975480286/vts_enterprises_india_private_limited_logo?e=2147483647&v=beta&t=0hXdwCVYy7a-iG76DUGYrO5faw5pSgHsA3WLlAclGkY" alt="" width={50} style={{borderRadius:'20px'}} />
                 <h1>VTS Insurance</h1>

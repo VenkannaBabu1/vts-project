@@ -101,7 +101,7 @@ function FeedbackForm() {
                 "phone": ph_value,
                 "checkbox_values": checked_val,
             };
-            // Save allEntries back to local storage
+            
             existingEntries.push(entry);
             localStorage.setItem("allEntries", JSON.stringify(existingEntries));
             setDisplay(false)

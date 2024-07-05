@@ -68,7 +68,7 @@ function TravelForm() {
         toast.success('Form submitted successfully! Please wait. Redirecting to Payment page',{position:"top-center"});
       setTimeout(() => {
         navigate('/payment', { state: { policyId: response.data.policyId, policyNo: response.data.policyNo, policyName: response.data.policyName } });
-        }, 5000); 
+        }, 4000); 
       })
       .catch((error) => {
         toast.error("An error occurred. Please try again.");
