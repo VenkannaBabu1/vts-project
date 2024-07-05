@@ -67,7 +67,7 @@ const MyPolicieUser = () => {
             className={`card ${expandedCardId === policy.policyNo ? 'expanded' : ''}`}
             onClick={() => handleCardClick(policy.policyNo)}
           >
-            <img className="card-img-top" src={policy.documentimage ? `data:image/png;base64,${policy.image}` : 'placeholder-image.png'} alt="Card cap" />
+            <img className="card-img-top" src='placeholder-image.png' alt="Card cap" />
             <div className="card-body">
               <h5 className="card-title">{policy.policyName}</h5>
               <p className="card-text">Policy ID: {policy.policyId}</p>
