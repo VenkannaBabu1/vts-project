@@ -20,8 +20,7 @@ const AdminNav = () => {
           <li><Link to="/ClaimAcceptReject" className='text-white'>All Claims</Link></li>
           <li><Link to="/all-payments" className='text-white'>All Payments</Link></li>
           <li><Link to="/view-all-users" className='text-white'>All Users</Link></li>
-        </ul>
-      </div>
+        <li>
       <div className="login">
             <button className='Login-btn text-white'>View User policies</button>
             {/* <ul className="drop-down">
@@ -50,6 +49,9 @@ const AdminNav = () => {
                 </li>
               </ul>
             }
+        </div>
+        </li>
+        </ul>
         </div>
       <div className="btn">
         <button

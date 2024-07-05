@@ -65,10 +65,11 @@ function HomePolicyView() {
                                             <td>{req.email}</td>
                                             <td>{req.policyId}</td>
                                             <td>{req.policyNo}</td>
-                                            <td>{req.policyName}</td>
-                                            <td>{req.location}</td>
-                                            <td>{req.owner}</td>
-                                            <td>{req.houseno}</td>
+                                            <td>{req.houseno}</td>{/*  //policy name will be displayed here but variable is houseno */}
+                                            <td>{req.policyName}</td>  {/* //location will be displayed here but variable is policyname */}
+                                            <td>{req.location}</td> {/* //house owner will be displayed here but variable is location */}
+                                            <td>{req.owner}</td> {/* //houseno will be displayed here but variable is owner */}
+                                          
                                             <td>{req.status}</td>
                                         </tr>
                                     )

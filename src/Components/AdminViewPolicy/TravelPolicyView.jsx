@@ -65,8 +65,8 @@ function TravelPolicyView() {
                                             <td>{req.email}</td>
                                             <td>{req.policyId}</td>
                                             <td>{req.policyNo}</td>
-                                            <td>{req.policyName}</td>
-                                            <td>{req.destination}</td>
+                                            <td>{req.destination}</td> {/* //policyName will be displayed here but variable is destination */}
+                                            <td>{req.policyName}</td>{/* //destination will be displayed here but variable is policyname */}
                                             <td>{req.modeOfTravel}</td>
                                             <td>{req.status}</td>
                                         </tr>
