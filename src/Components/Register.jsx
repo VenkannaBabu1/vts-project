@@ -63,7 +63,7 @@ const Register = () => {
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
     
-    // Convert the date of birth to "YYYY-MM-DD" format
+    
     values.dob = values.dob.format('YYYY-MM-DD');
     
     try {
