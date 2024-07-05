@@ -97,7 +97,7 @@ const MyPolicieUser = () => {
                   <div className="card-body">
                     <h5 className="card-title">{policy.policyName}</h5>
                     <p className="card-text">Policy ID: {policy.policyId}</p>
-                    <p className="card-text">Policy Name: {policy.policyName}</p>
+                    <p className="card-text">Policy Name: {policy.destination}</p>
                     <div className="more-info">
                       <p>Email: {policy.email}</p>
                       <p>Policy No: {policy.policyNo}</p>
