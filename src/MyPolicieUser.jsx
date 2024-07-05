@@ -93,7 +93,7 @@ const MyPolicieUser = () => {
             {data.map((policy) => (
               policy.policyNo === expandedCardId && (
                 <div key={policy.policyNo} className="card expanded-card">
-                    <img className="card-img-top" src={policy.documentimage ? `data:image/png;base64,${policy.image}` : 'placeholder-image.png'} alt="Card image cap" />
+                    <img className="card-img-top" src={policy.documentimage ? `data:image/png;base64,${policy.documentimage}` : 'placeholder-image.png'} alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">{policy.policyName}</h5>
                     <p className="card-text">Policy ID: {policy.policyId}</p>
