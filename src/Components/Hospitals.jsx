@@ -10,8 +10,8 @@ const Hospitals = () => {
     <div className='h-screen'>
             <Navbar />
     <div>
-      <div className="PACKAGES" id="PACKAGES">
-        <h1 className="heading h1">Hospitals</h1>
+      <div className="PACKAGES mb-4" id="PACKAGES">
+        <h1 className="heading h1 mb-3">Hospitals</h1>
         <div className="box-container">
 
 
