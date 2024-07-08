@@ -16,6 +16,7 @@ const AcceptPolicyAgent = () => {
   const [type, setType] = useState("");
   const token = localStorage.getItem("token");
   console.log(data);
+  console.log("policy data",policyData);
 
   useEffect(() => {
     const determineType = () => {
