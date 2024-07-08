@@ -15,11 +15,11 @@ function AllPolicies() {
   const token = localStorage.getItem("token");
 
   const slideForward = () => {
-    setTx(prevTx => (prevTx > -100 ? prevTx - 100 : prevTx));
+    setTx(prevTx => (prevTx > -50 ? prevTx - 50 : prevTx));
   };
 
   const slideBackward = () => {
-    setTx(prevTx => (prevTx < 100 ? prevTx + 100 : prevTx));
+    setTx(prevTx => (prevTx < 50 ? prevTx + 50 : prevTx));
   };
 
   const [policies, setPolicies] = useState([]);
