@@ -114,8 +114,8 @@ const Hospitals = () => {
             <img src="https://images5.alphacoders.com/653/thumb-1920-653422.jpg" alt="" />
             <div className="content-p">
               
-                
-                Location : Mumbai,Vizag,Goa
+                <h3>
+                Location : Mumbai,Vizag,Goa</h3>
               <h3 className='mt-1'>Name : Harika Multi Speciality Hospitals</h3>
               
               <div className="price">
