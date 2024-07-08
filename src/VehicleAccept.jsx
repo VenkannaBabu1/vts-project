@@ -81,7 +81,7 @@ function VehicleAccept() {
                             </tr>
                         )):(
                             <tr>
-                                <td>NO Data Found</td>
+                                <td colSpan={12}>NO Data Found</td>
                             </tr>
                         )
                         )}
