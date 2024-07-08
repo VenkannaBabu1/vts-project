@@ -54,6 +54,7 @@ const AcceptPolicyAgent = () => {
         }
       );
       setData(response.data);
+      console.log(response.data);
     } catch (error) {
       console.error('Error fetching Users:', error);
     }
