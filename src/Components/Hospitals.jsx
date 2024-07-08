@@ -11,7 +11,7 @@ const Hospitals = () => {
             <Navbar />
     <div>
       <div className="PACKAGES" id="PACKAGES">
-        <h1 className="heading">Hospitals</h1>
+        <h1 className="heading h1">Hospitals</h1>
         <div className="box-container">
 
 
@@ -24,10 +24,10 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location:Mumbai,Vizag,Goa,Amaravathi,Chennai
+                Locations : Mumbai,Vizag,Goa
               </h3>
               <h3>
-              <li>Name:Apollo Hospitals</li>
+              <h3>Name : Apollo Hospitals</h3>
               </h3>
               <div className="price">
                <p>Contact :<span> 845456789</span></p>
@@ -43,10 +43,10 @@ const Hospitals = () => {
             <div className="content-p">
               <h3 >
                 
-                Location : Mumbai,Vizag,Goa,Amaravathi,Chennai,kolkata
+                Locations : Mumbai,Vizag,Goa
               </h3>
               <h3 >
-              <li>Name: Acharya Multi Speaciality Hospitals</li>
+              <h3>Name: Acharya Multi Speaciality Hospitals</h3>
               </h3>
               
               <div className="price">
@@ -63,13 +63,13 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag,Goa,Amaravathi,Chennai
+                Locations : Mumbai,Vizag,Goa
               </h3>
               <h3 >
-              <li>Name : Apple Multi Speaciality Hospitals</li>
+              <h3>Name : Apple Multi Speaciality Hospitals</h3>
               </h3>
               <div className="price">
-               <p>contact :<span> 4578123954</span></p>
+               <p>Contact :<span> 4578123954</span></p>
               </div>
               {/* <a href="/login" className="btn">Book Now</a> */}
             </div>
@@ -81,10 +81,10 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag,Goa,Amaravathi,Chennai
+                Location : Mumbai,Vizag,Goa
               </h3>
               
-              <li>Name: kaspisetti Home care Hospitals</li>
+              <li>Name : kaspisetti  Hospitals</li>
               
               <div className="price">
                <p>Contact :<span> 7894561223</span></p>
@@ -100,7 +100,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag,Goa,Amaravathi,Chennai
+                Location : Mumbai,Vizag,Goa
               </h3>
               <li>Name: Siddhu Multi Speaciality Hospitals</li>
               
@@ -115,8 +115,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                LOcation : Mumbai,Vizag,Goa,Amaravathi,Chennai
-              </h3>
+                LOcation : Mumbai,Vizag,Goa
               <li>Name : Harika Multi Speciality Hospitals</li>
               
               <div className="price">
@@ -131,7 +130,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                LOcation : Mumbai,Vizag,Goa,Amaravathi,Chennai
+                Location : Mumbai,Vizag
               </h3>
               <li>Name : Satyavathi Multi Speciality Hospitals</li>
               
@@ -147,7 +146,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag,Goa,Amaravathi,Chennai
+                Location : Mumbai,Vizag
               </h3>
               <li>Name : Kanaka Raju Multi Speciality Hospitals</li>
               
@@ -163,9 +162,9 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag,Goa,Amaravathi,Chennai
+                Location : Mumbai,Chennai
               </h3>
-              <li>Name : Hari mUlti Speciality Hospitals </li>
+              <li>Name : Hari Multi Speciality Hospitals </li>
               
               <div className="price">
                <p>Contact :<span> 789456123 </span></p>

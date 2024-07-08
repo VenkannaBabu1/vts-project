@@ -73,7 +73,7 @@
 .PACKAGES .box-container .box-pack .content-p .price span {
     color: #666;
     font-size: 1rem;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
 }
 
 /* Responsive Adjustments */
