@@ -76,9 +76,10 @@ function TravelAccept() {
                                 <td  style={{verticalAlign:"middle"}}>{req.modeOfTravel}</td>
                                 <td  style={{verticalAlign:"middle"}}>{req.ticketId}</td>
                                 <td  style={{verticalAlign:"middle"}}>{req.nomineeName}</td>
-                                <td style={{verticalAlign:"middle"}}>{req.nomineeAge}</td>
+                                
                                 <td style={{verticalAlign:"middle"}}>{req.nomineeRelation}</td>
-                                <td style={{verticalAlign:"middle"}}>{req.nomineeAadharnumber}</td>
+                                <td style={{verticalAlign:"middle"}}>{req.nomineeAge}</td>
+                                <td style={{verticalAlign:"middle"}}>{req.nomineeAadharNo}</td>
                                <td style={{verticalAlign:"middle"}}>
                                     <img src={`data:image/png;base64,${req.documentimage}`} alt="Claim" className="rounded-circle" />
                                 </td>
