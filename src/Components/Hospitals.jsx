@@ -84,7 +84,7 @@ const Hospitals = () => {
                 Location : Mumbai,Vizag,Goa
               </h3>
               
-              <li>Name : kaspisetti  Hospitals</li>
+              <h3>Name : kaspisetti  Hospitals</h3>
               
               <div className="price">
                <p>Contact :<span> 7894561223</span></p>
@@ -102,7 +102,7 @@ const Hospitals = () => {
                 
                 Location : Mumbai,Vizag,Goa
               </h3>
-              <li>Name: Siddhu Multi Speaciality Hospitals</li>
+              <h3>Name: Siddhu Multi Speaciality Hospitals</h3>
               
               <div className="price">
                <p>Contact :<span>7894561232</span></p>
@@ -113,10 +113,10 @@ const Hospitals = () => {
           <div className="box-pack">
             <img src="https://images5.alphacoders.com/653/thumb-1920-653422.jpg" alt="" />
             <div className="content-p">
-              <h3>
+              
                 
                 LOcation : Mumbai,Vizag,Goa
-              <li>Name : Harika Multi Speciality Hospitals</li>
+              <h3>Name : Harika Multi Speciality Hospitals</h3>
               
               <div className="price">
                <p>Contact : <span> 78978723</span></p>
@@ -148,7 +148,7 @@ const Hospitals = () => {
                 
                 Location : Mumbai,Vizag
               </h3>
-              <li>Name : Kanaka Raju Multi Speciality Hospitals</li>
+              <h3>Name : Kanaka Raju Multi Speciality Hospitals</h3>
               
               <div className="price">
                <p>Contact :<span>987456512</span></p>
@@ -164,7 +164,7 @@ const Hospitals = () => {
                 
                 Location : Mumbai,Chennai
               </h3>
-              <li>Name : Hari Multi Speciality Hospitals </li>
+              <h3>Name : Hari Multi Speciality Hospitals </h3>
               
               <div className="price">
                <p>Contact :<span> 789456123 </span></p>
