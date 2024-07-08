@@ -28,7 +28,7 @@
   
   .slider1 li {
     flex: 0 3 33.3333%; 
-    /* margin-right: 20px;  */
+    margin-right: 20px; 
   }
   
   .slide-card1 {
