@@ -91,6 +91,7 @@
 
 .policy-description {
   background-color: #ebf8ff;
+  justify-content: space-between;
   padding: 10px;
   /* border-radius: 8px; */
   /* margin-top: 10px; */
