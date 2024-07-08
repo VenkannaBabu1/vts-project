@@ -25,6 +25,7 @@ function TravelAccept() {
             });
             setRequests(response.data);
             setLoading(false); // Data fetched, set loading to false
+            console.log(response.data);
         } catch (error) {
             console.log("fetching data error", error);
             setLoading(false); // Set loading to false on error
