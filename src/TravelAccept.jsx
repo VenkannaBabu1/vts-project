@@ -7,7 +7,7 @@ import './approval.css';
 
 function TravelAccept() {
     const [requests, setRequests] = useState([]);
-    const [loading, setLoading] = useState(true); // Loading state
+    const [loading, setLoading] = useState(true); 
     const navigate = useNavigate();
     const token = localStorage.getItem("token");
 
@@ -24,11 +24,11 @@ function TravelAccept() {
                 }
             });
             setRequests(response.data);
-            setLoading(false); // Data fetched, set loading to false
+            setLoading(false);
             console.log(response.data);
         } catch (error) {
             console.log("fetching data error", error);
-            setLoading(false); // Set loading to false on error
+            setLoading(false); 
         }
     }
 
@@ -63,7 +63,7 @@ function TravelAccept() {
                     </thead>
                     <tbody>
                   {loading ? (
-                    <tr><td colSpan={9}>loading Data.....</td></tr>
+                    <tr><td colSpan={13}>loading Data.....</td></tr>
                   ):( 
                     requests.length >0 ?(
                         requests.map((req, index) =>
