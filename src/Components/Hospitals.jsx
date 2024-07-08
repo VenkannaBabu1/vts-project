@@ -46,7 +46,7 @@ const Hospitals = () => {
                 Locations : Mumbai,Vizag,Goa
               </h3>
               <h3 >
-              <h3 className='mt-2'>Name: Acharya Multi Speaciality Hospitals</h3>
+              <h3 className='mt-3'>Name: Acharya Multi Speaciality Hospitals</h3>
               </h3>
               
               <div className="price">
@@ -66,7 +66,7 @@ const Hospitals = () => {
                 Locations : Mumbai,Vizag,Goa
               </h3>
               <h3 >
-              <h3 className='mt-2'>Name : Apple Multi Speaciality Hospitals</h3>
+              <h3 className='mt-3'>Name : Apple Multi Speaciality Hospitals</h3>
               </h3>
               <div className="price">
                <p>Contact :<span> 4578123954</span></p>
@@ -102,7 +102,7 @@ const Hospitals = () => {
                 
                 Location : Mumbai,Vizag,Goa
               </h3>
-              <h3 className='mt-2'>Name: Siddhu Multi Speaciality Hospitals</h3>
+              <h3 className='mt-3'>Name: Siddhu Multi Speaciality Hospitals</h3>
               
               <div className="price">
                <p>Contact :<span>7894561232</span></p>
@@ -116,7 +116,7 @@ const Hospitals = () => {
               
                 <h3>
                 Location : Mumbai,Vizag,Goa</h3>
-              <h3 className='mt-2'>Name : Harika Multi Speciality Hospitals</h3>
+              <h3 className='mt-3'>Name : Harika Multi Speciality Hospitals</h3>
               
               <div className="price">
                <p>Contact : <span> 78978723</span></p>
@@ -132,7 +132,7 @@ const Hospitals = () => {
                 
                 Location : Mumbai,Vizag
               </h3>
-              <h3 className='mt-2'>Name : Satyavathi Multi Speciality Hospitals</h3>
+              <h3 className='mt-3'>Name : Satyavathi Multi Speciality Hospitals</h3>
               
               <div className="price">
                <p>Contact : <span> 9959509439</span></p>
@@ -148,7 +148,7 @@ const Hospitals = () => {
                 
                 Location : Mumbai,Vizag
               </h3>
-              <h3 className='mt-2'>Name : Kanaka Raju Multi Speciality Hospitals</h3>
+              <h3 className='mt-3'>Name : Kanaka Raju Multi Speciality Hospitals</h3>
               
               <div className="price">
                <p>Contact :<span>987456512</span></p>
@@ -164,7 +164,7 @@ const Hospitals = () => {
                 
                 Location : Mumbai,Chennai
               </h3>
-              <h3 className='mt-2'>Name : Hari Multi Speciality Hospitals </h3>
+              <h3 className='mt-3'>Name : Hari Multi Speciality Hospitals </h3>
               
               <div className="price ">
                <p>Contact :<span> 789456123 </span></p>
