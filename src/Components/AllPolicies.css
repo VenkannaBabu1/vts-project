@@ -83,20 +83,20 @@
 
 .policy-coverage {
   background-color: #ebf8ff;
-  padding: 5px;
+  padding: 10px;
   /* border-radius: 8px; */
   font-family: "Poppins";
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .policy-description {
   background-color: #ebf8ff;
-  padding: 5px;
+  padding: 10px;
   /* border-radius: 8px; */
   /* margin-top: 10px; */
   font-family: "Poppins";
   font-size: 14px;
-  height: 280px; 
+  height: 300px; 
   overflow: hidden; 
 }
 

@@ -70,18 +70,18 @@
   .policy-coverage {
     background-color: #ebf8ff;
     padding: 5px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     font-family: "Poppins";
     /* margin-top: 10px; */
   }
   
   .policy-description {
     background-color: #ebf8ff;
-    padding: 5px;
-    border-radius: 8px;
+    padding: 10px;
+    /* border-radius: 8px; */
     /* margin-top: 10px; */
     font-size: 12px;
-    height: 160px; 
+    height: 300px; 
     overflow: hidden;
     font-family: "Poppins";
   }
@@ -91,7 +91,7 @@
   }
   
   .policy-button {
-    background-color: #f6ad55;
+    background-color: #3785fa;
     border: none;
     border-radius: 8px;
     padding: 10px;
