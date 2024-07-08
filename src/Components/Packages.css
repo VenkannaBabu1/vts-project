@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 .PACKAGES .heading {
     padding-top: 5rem;
     text-align: center;
@@ -21,6 +23,7 @@
     flex: 1 1 calc(33.333% - 2rem);
     gap: 10px;
     border-radius: .5rem;
+    font-family: "Poppins";
     height: auto;
     max-width: calc(33.333% - 2rem);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
@@ -29,6 +32,20 @@
     display: flex;
     flex-direction: column;
 }
+
+.PACKAGES .box-container .box-pack:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
+    /* transform: matrix(0,1,1,0,0,0); */
+    /* transform: scale(0.7); */
+    /* transform: translate(); */
+    /* transform: skew(-5deg,-10deg); */
+    /* transform: rotate(15deg);*/
+    
+    
+    transform: translate(-5px,-10px); 
+   
+  
+  }
 
 .PACKAGES .box-container .box-pack img {
     height: 20rem;
