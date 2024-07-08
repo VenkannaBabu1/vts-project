@@ -23,7 +23,7 @@
     border-radius: .5rem;
     height: auto;
     max-width: calc(33.333% - 2rem);
-    box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, .1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
     background-color: black;
     overflow: hidden;
     display: flex;
