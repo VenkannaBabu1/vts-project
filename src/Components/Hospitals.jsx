@@ -81,7 +81,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag,Goa
+                Locations : Mumbai,Vizag,Goa
               </h3>
               
               <h3>Name : kaspisetti  Hospitals</h3>
@@ -100,7 +100,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag,Goa
+                Locations : Mumbai,Vizag,Goa
               </h3>
               <h3 className='mt-3'>Name: Siddhu Multi Speaciality Hospitals</h3>
               
@@ -115,7 +115,7 @@ const Hospitals = () => {
             <div className="content-p">
               
                 <h3>
-                Location : Mumbai,Vizag,Goa</h3>
+                Locations : Mumbai,Vizag,Goa</h3>
               <h3 className='mt-3'>Name : Harika Multi Speciality Hospitals</h3>
               
               <div className="price">
@@ -130,7 +130,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag
+                Locations : Mumbai,Vizag
               </h3>
               <h3 className='mt-3'>Name : Satyavathi Multi Speciality Hospitals</h3>
               
@@ -146,7 +146,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Vizag
+                Locations : Mumbai,Vizag
               </h3>
               <h3 className='mt-3'>Name : Kanaka Raju Multi Speciality Hospitals</h3>
               
@@ -162,7 +162,7 @@ const Hospitals = () => {
             <div className="content-p">
               <h3>
                 
-                Location : Mumbai,Chennai
+                Locations : Mumbai,Chennai
               </h3>
               <h3 className='mt-3'>Name : AIIMS Multi Speciality Hospitals </h3>
               
