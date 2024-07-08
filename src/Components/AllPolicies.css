@@ -41,11 +41,11 @@
 }
 .slide-card:hover{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
-  transform: matrix(0,1,1,0,0,0);
-  /* transform: scale(0.7);
+  /* transform: matrix(0,1,1,0,0,0); */
+  /* transform: scale(0.7); */
   transform: skew(-5deg,-10deg);
-  transform: rotate(15deg);
-  transform: rotate(15deg);
+  /* transform: rotate(15deg);
+  
   transform: translate(-5px,-10px); */
   width: 300px; 
   height: 450px; 
@@ -113,8 +113,7 @@
   position: absolute;
   top: 40%;
   background-color: rgb(50, 10, 248);
-  border-radius: 10
-  0px;
+  border-radius: 10rem;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 2;
