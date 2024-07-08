@@ -39,7 +39,7 @@ function VehicleAccept() {
             <h1 className="text-center h1 mb-1 text-black">Vehicle Policy  Applications</h1>
 
            
-                <table className="table table-striped text-center">
+                <table className="table table-striped text-center mb-2">
                     <thead>
                         <tr className='text-center'>
                             <th>S.No</th>
@@ -58,7 +58,9 @@ function VehicleAccept() {
                     </thead>
                     <tbody>
                     {loading ? (
-                <p className="text-center">Loading...</p>
+                        <tr>
+                            <td colSpan={12}  className='text-center'>Loading Data.......</td>
+                        </tr>
             ) : ( requests.length>0?(
                         requests && requests.map((req, index) =>
                             <tr key={req.id}>
@@ -73,7 +75,7 @@ function VehicleAccept() {
                                 <td style={{ verticalAlign: "middle" }}>{req.chassisNumber}</td>
                                 <td style={{ verticalAlign: "middle" }}>{req.manufacturingYear}</td>
                                 <td style={{ verticalAlign: "middle" }}>
-                                    <img src={`data:image/png;base64,${req.documentimage}`} alt="Claim" className="rounded-circle" />
+                                    <img src={`data:image/png;base64,${req.documentimage}`} alt="Claim" className="rounded" />
                                 </td>
                                 <td style={{ verticalAlign: "middle" }}>
                                     <button className='btn btn-success' onClick={() => navigate("/transaction", { state: { policyNo: req.policyNo, type:"VEHICLE" } })}>View Transactions</button>

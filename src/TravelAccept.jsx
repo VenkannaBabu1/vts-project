@@ -40,12 +40,12 @@ function TravelAccept() {
             <UserNav />
     <div className='approval'>
         <div className='container mt-0 shadow'>
-            <h1 className="text-center h1 mb-1 text-black"> Appliedd Travel Policies</h1>
+            <h1 className="text-center h1 mb-1 text-black"> Applied Travel Policies</h1>
            <div className='overflow-x-auto'>
                 
                 <table className="table table-striped text-center">
                     <thead>
-                        <tr className='text-center'>
+                        <tr className='text-center' style={{textTransform:"capitalize"}}>
                             <th>S.No</th>
                             <th>Email</th>
                             <th>Policy Id</th>
