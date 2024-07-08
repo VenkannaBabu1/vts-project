@@ -11,7 +11,7 @@ const Hospitals = () => {
             <Navbar />
     <div>
       <div className="PACKAGES mb-4" id="PACKAGES">
-        <h1 className="heading h1 mb-3">Hospitals</h1>
+        <h1 className="heading h1 container mb-3">Hospitals</h1>
         <div className="box-container">
 
 
