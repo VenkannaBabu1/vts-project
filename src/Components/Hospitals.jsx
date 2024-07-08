@@ -20,7 +20,7 @@ const Hospitals = () => {
 
 
           <div className="box-pack">
-            <img src="https://w0.peakpx.com/wallpaper/581/14/HD-wallpaper-gateway-of-india-cst-mumbai.jpg" alt="" />
+            <img src="https://www.jointreplacementsurgeryhospitalindia.com/hospital/apollo-images/apollo-hospital-image.jpg" alt="" />
             <div className="content-p">
               <h3>
                 
@@ -39,7 +39,7 @@ const Hospitals = () => {
 
       
           <div className="box-pack">
-            <img src="https://w0.peakpx.com/wallpaper/702/593/HD-wallpaper-victoria-memorial-kolkata-india-2022-bing.jpg" alt="" />
+            <img src="https://travocure.com/wp-content/uploads/2021/11/DXGZ1r2XkAADrAR-1030x865.jpg" alt="" />
             <div className="content-p">
               <h3 >
                 
@@ -59,7 +59,7 @@ const Hospitals = () => {
 
      
           <div className="box-pack">
-            <img src="https://i.pinimg.com/originals/0a/21/ca/0a21ca209a71f1c0404da30411be770f.jpg" alt="" />
+            <img src="https://content.jdmagicbox.com/comp/surat/47/0261p261std3847/catalogue/dr-k-c-jain-apple-hospital-surat-surat-neurosurgeons-lcun7cropm.jpg" alt="" />
             <div className="content-p">
               <h3>
                 
@@ -77,7 +77,7 @@ const Hospitals = () => {
 
 
           <div className="box-pack">
-            <img src="https://www.pixel4k.com/wp-content/uploads/2018/09/eiffel-tower-paris-4k_1538069087.jpg" alt="" />
+            <img src="https://vshospitals.b-cdn.net/wp-content/uploads/2022/02/slider-mobile.webp" alt="" />
             <div className="content-p">
               <h3>
                 
@@ -96,7 +96,7 @@ const Hospitals = () => {
 
   
           <div className="box-pack">
-            <img src="https://c4.wallpaperflare.com/wallpaper/974/957/304/abisko-4k-5k-sweden-wallpaper-preview.jpg" alt="" />
+            <img src="https://www.impactguru.com/info/wp-content/uploads/2023/09/Max-Super-Speciality-Hospital-Saket-New-Delhi.jpg" alt="" />
             <div className="content-p">
               <h3>
                 
@@ -111,7 +111,7 @@ const Hospitals = () => {
             </div>
           </div>
           <div className="box-pack">
-            <img src="https://images5.alphacoders.com/653/thumb-1920-653422.jpg" alt="" />
+            <img src="https://wallpapers.com/images/hd/hospital-pictures-h8iabdgtt88k9gjv.jpg" alt="" />
             <div className="content-p">
               
                 <h3>
@@ -126,7 +126,7 @@ const Hospitals = () => {
           </div>
 
           <div className="box-pack">
-            <img src="https://wallpapers.com/images/hd/4k-anime-tokyo-b7z122rhgd2y9n5f.jpg" alt="" />
+            <img src="https://vshospitals.b-cdn.net/wp-content/uploads/2022/02/medanta-14-e1530281055543.webp" alt="" />
             <div className="content-p">
               <h3>
                 
@@ -142,7 +142,7 @@ const Hospitals = () => {
           </div>
 
           <div className="box-pack">
-            <img src="https://hips.hearstapps.com/hmg-prod/images/long-boat-docked-on-beach-in-krabi-thailand-summers-royalty-free-image-1622044679.jpg?crop=1xw:1xh;center,top&resize=980:*" alt="" />
+            <img src="https://www.adotrip.com/public/images/medical/master_images/64f6b64008a72-Best%20Hospitals%20In%20Kochi.jpg" alt="" />
             <div className="content-p">
               <h3>
                 
@@ -158,13 +158,13 @@ const Hospitals = () => {
           </div>
 
           <div className="box-pack">
-            <img src="https://www.jetsetter.com//uploads/sites/7/2018/04/9s9_ATCO-1380x921.jpeg" alt="" />
+            <img src="https://qph.cf2.quoracdn.net/main-qimg-4d190ce2294e9ebadf7f1b16702ec2ee" alt="" />
             <div className="content-p">
               <h3>
                 
                 Location : Mumbai,Chennai
               </h3>
-              <h3 className='mt-3'>Name : Hari Multi Speciality Hospitals </h3>
+              <h3 className='mt-3'>Name : AIIMS Multi Speciality Hospitals </h3>
               
               <div className="price ">
                <p>Contact :<span> 789456123 </span></p>
