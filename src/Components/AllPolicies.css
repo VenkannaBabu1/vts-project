@@ -6,12 +6,14 @@
   width: 100%;
   padding-top: 50px;
   min-height: 80vh;
+  font-family: "Poppins";
 
 }
 
 .slider {
   display: flex;
   transition: transform 0.5s ease;
+  font-family: "Poppins";
   width: 100%;
 }
 
@@ -25,15 +27,17 @@
 
 .slider li {
   flex: 0 3 33.3333%; 
+  font-family: "Poppins";
   margin-right: 35px; 
 }
 
 .slide-card {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.984);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.519);
   padding: 20px;
-  width: 280px; 
+  font-family: "Poppins";
+  width: 300px; 
   height: 450px; 
   display: flex;
   flex-direction: column;
@@ -41,50 +45,59 @@
 }
 .slide-card:hover{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
-  transform: matrix(0,1,1,0,0,0);
-  /* transform: scale(0.7);
-  transform: skew(-5deg,-10deg);
-  transform: rotate(15deg);
-  transform: rotate(15deg);
-  transform: translate(-5px,-10px); */
+  /* transform: matrix(0,1,1,0,0,0); */
+  /* transform: scale(0.7); */
+  /* transform: translate(); */
+  /* transform: skew(-5deg,-10deg); */
+  /* transform: rotate(15deg);*/
+  
+  
+  transform: translate(-5px,-10px); 
   width: 300px; 
   height: 450px; 
 
 }
 .user-info {
+  font-family: "Poppins";
   margin-bottom: 10px;
 }
 
 .policy-name {
   font-size: 20px;
   color: #4a5568;
+  font-family: "Poppins";
   font-weight: bold;
 }
 
 .policy-details {
   font-size: 15px;
   font-weight: 600;
+  font-family: "Poppins";
 }
 
 .policy-premium {
   font-size: 15px;
   color: #3182ce;
+  font-family: "Poppins";
 }
 
 .policy-coverage {
   background-color: #ebf8ff;
-  padding: 5px;
-  border-radius: 8px;
-  margin-top: 10px;
+  padding: 10px;
+  /* border-radius: 8px; */
+  font-family: "Poppins";
+  margin-top: 5px;
 }
 
 .policy-description {
   background-color: #ebf8ff;
-  padding: 5px;
-  border-radius: 8px;
-  margin-top: 10px;
+  justify-content: space-between;
+  padding: 10px;
+  /* border-radius: 8px; */
+  /* margin-top: 10px; */
+  font-family: "Poppins";
   font-size: 14px;
-  height: 220px; 
+  height: 280px; 
   overflow: hidden; 
 }
 
@@ -97,6 +110,7 @@
   border: none;
   border-radius: 8px;
   padding: 10px;
+  font-family: "Poppins";
   color: #fff;
   cursor: pointer;
   text-align: center;
@@ -112,9 +126,9 @@
 .back-btn {
   position: absolute;
   top: 40%;
-  background-color: rgb(50, 10, 248);
-  border-radius: 10
-  0px;
+  filter: invert(1);
+  /* filter: brightness(0); */
+  border-radius: 10rem;
   transform: translateY(-50%);
   cursor: pointer;
   z-index: 2;

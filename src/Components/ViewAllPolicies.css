@@ -7,12 +7,14 @@
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 100px;
+    font-family: "Poppins";
   }
   
   .slider1 {
     display: flex;
     transition: transform 0.5s ease; 
     width: 100%;
+    font-family: "Poppins";
   }
   
   .slider1 ul {
@@ -21,6 +23,7 @@
     margin: 0;
     list-style: none;
     width: 100%;
+    font-family: "Poppins";
   }
   
   .slider1 li {
@@ -33,11 +36,26 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 280px; 
+    width: 300px; 
     height: 450px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: "Poppins";
+  }
+  .slide-card1:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
+    /* transform: matrix(0,1,1,0,0,0); */
+    /* transform: scale(0.7); */
+    /* transform: translate(); */
+    /* transform: skew(-5deg,-10deg); */
+    /* transform: rotate(15deg);*/
+    
+    
+    transform: translate(-5px,-10px); 
+    width: 300px; 
+    height: 450px; 
+  
   }
   
   .user-info {
@@ -48,33 +66,38 @@
     font-size: 20px;
     color: #4a5568;
     font-weight: bold;
+    font-family: "Poppins";
   }
   
   .policy-details {
     font-size: 15px;
     font-weight: 600;
+    font-family: "Poppins";
   }
   
   .policy-premium {
     font-size: 15px;
+    font-family: "Poppins";
     color: #3182ce;
   }
   
   .policy-coverage {
     background-color: #ebf8ff;
     padding: 5px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    font-family: "Poppins";
     /* margin-top: 10px; */
   }
   
   .policy-description {
     background-color: #ebf8ff;
-    padding: 5px;
-    border-radius: 8px;
+    padding: 10px;
+    /* border-radius: 8px; */
     /* margin-top: 10px; */
     font-size: 12px;
-    height: 120px; 
+    height: 280px; 
     overflow: hidden;
+    font-family: "Poppins";
   }
   
   .policy-description:hover {
@@ -82,15 +105,16 @@
   }
   
   .policy-button {
-    background-color: #f6ad55;
+    background-color: #3785fa;
     border: none;
     border-radius: 8px;
     padding: 10px;
     color: #fff;
+    font-family: "Poppins";
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s;
-    margin-top: auto; /* Align button to the bottom */
+    margin-top: auto;
   }
   
   .policy-button:hover {
@@ -99,6 +123,7 @@
   
   .next-btn,
   .back-btn {
+    filter: invert(1);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
