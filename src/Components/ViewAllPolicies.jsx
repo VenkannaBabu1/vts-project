@@ -103,12 +103,12 @@ function AllPolicies() {
                   </div>
                 
                   <button
-                    className="policy-button w-[230px] ml-1 mt-1 hover:bg-blue-500 hover:text-white rounded-xl pb:0"
+                    className="policy-button w-[230px] ml-2 mt-1 hover:bg-blue-500 hover:text-white rounded-xl pb:0"
                     onClick={() => handleClick(policy.id, policy.type, policy.policyId, policy.policyName, policy.coverage, policy.description)}
                   >
                     Edit now
                   </button>
-                  <button className="policy-button w-[230px] ml-1 mt-2  hover:text-white rounded-xl pb:1" onClick={() => handleDelete(policy.id)}> Delete</button>
+                  <button className="policy-button w-[230px] ml-2 mt-2  hover:text-white rounded-xl pb:1" onClick={() => handleDelete(policy.id)}> Delete</button>
                 </div>
                 
               </li>
