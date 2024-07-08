@@ -27,8 +27,8 @@
   }
   
   .slider1 li {
-    flex: 33.3333%; 
-    /* margin-right: 20px;  */
+    flex: 0 3 33.3333%; 
+    margin-right: 20px; 
   }
   
   .slide-card1 {
@@ -83,7 +83,7 @@
   
   .policy-coverage {
     background-color: #ebf8ff;
-    padding: 5px;
+    padding: 10px;
     /* border-radius: 8px; */
     font-family: "Poppins";
     /* margin-top: 10px; */
@@ -104,7 +104,7 @@
     overflow: auto; 
   }
   
-  .policy-button {
+  .policy-button1 {
     background-color: #3785fa;
     border: none;
     border-radius: 8px;
@@ -117,7 +117,7 @@
     margin-top: auto;
   }
   
-  .policy-button:hover {
+  .policy-button1:hover {
     background-color: #dd6b20;
   }
   

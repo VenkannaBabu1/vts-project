@@ -15,11 +15,11 @@ function AllPolicies() {
   const token = localStorage.getItem("token");
 
   const slideForward = () => {
-    setTx(prevTx => (prevTx > -10 ? prevTx - 10 : prevTx));
+    setTx(prevTx => (prevTx > -50 ? prevTx - 50 : prevTx));
   };
 
   const slideBackward = () => {
-    setTx(prevTx => (prevTx < 10 ? prevTx + 10 : prevTx));
+    setTx(prevTx => (prevTx < 50 ? prevTx + 50 : prevTx));
   };
 
   const [policies, setPolicies] = useState([]);
@@ -72,7 +72,7 @@ function AllPolicies() {
         <img src={next_icon} alt="Next" className="next-btn" onClick={slideForward} />
         <img src={back_icon} alt="Back" className="back-btn" onClick={slideBackward} />
         <div className="slider1">
-          <ul ref={slider} style={{ transform: `translateX(${tx}%)`, transition: 'transform 0.5s ease' }}>
+          <ul ref={slider} style={{ transform: `translateX(${tx}%)`, transition: 'transform 0.5s ease' ,flex: '0 1 33.333333%'}} >
             {policies.map((policy, index) => (
               <li key={index}>
                 <div className="slide-card1 ">
@@ -103,12 +103,12 @@ function AllPolicies() {
                   </div>
                 
                   <button
-                    className="policy-button w-[230px] ml-2 mt-1 hover:bg-blue-500 hover:text-white rounded-xl pb:0"
+                    className="policy-button1 w-[230px] ml-3 mt-1 hover:bg-blue-500 hover:text-white rounded-xl pb:0"
                     onClick={() => handleClick(policy.id, policy.type, policy.policyId, policy.policyName, policy.coverage, policy.description)}
                   >
                     Edit now
                   </button>
-                  <button className="policy-button w-[230px] ml-2 mt-2  hover:text-white rounded-xl pb:1" onClick={() => handleDelete(policy.id)}> Delete</button>
+                  <button className="policy-button1 w-[230px] ml-3 mt-2  hover:text-white rounded-xl pb:1" onClick={() => handleDelete(policy.id)}> Delete</button>
                 </div>
                 
               </li>
