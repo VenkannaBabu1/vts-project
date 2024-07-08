@@ -86,17 +86,17 @@ const Hero2 = () => {
                                 <>
                                     <header className='mb-3 font-bold text-lg'>{selectedIcon} Plans</header>
                                     <div className="grid grid-cols-2 gap-6">
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><FaCar className="inline-block mb-1 mr-2 text-xl"  /> 2 Wheeler Policy</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href=""><FaCar className="inline-block mb-1 mr-2 text-xl"  /> 2 Wheeler Policy</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><FaTruck className="inline-block mb-1 mr-2 text-xl"  /> 4 Wheeler Policy</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href=""><FaTruck className="inline-block mb-1 mr-2 text-xl"  /> 4 Wheeler Policy</a>
                                         </div>
-                                        <div className="policy3 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><FaBus className="inline-block mb-1 mr-2 text-xl"  /> Commercial Vehicles: Goods</a>
+                                        <div className="policy3 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><FaBus className="inline-block mb-1 mr-2 text-xl"  /> Commercial Vehicles: Goods</a>
                                         </div>
-                                        <div className="policy4 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><FaBus className="inline-block mb-1 mr-2 text-xl"  /> Commercial Vehicles: Passengers</a>
+                                        <div className="policy4 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><FaBus className="inline-block mb-1 mr-2 text-xl"  /> Commercial Vehicles: Passengers</a>
                                         </div>
                                     </div>
                                 </>
@@ -105,14 +105,14 @@ const Hero2 = () => {
                                 <>
                                     <header className='mb-3 font-bold text-lg'>{selectedIcon} Plans</header>
                                     <div className="grid grid-cols-2 gap-6">
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdLocalHospital className="inline-block mb-1 mr-2 text-xl"  /> Super Health Top-Up</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href=""><MdLocalHospital className="inline-block mb-1 mr-2 text-xl"  /> Super Health Top-Up</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl" /> Healthy Family</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl" /> Healthy Family</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdLocalHospital className="inline-block mb-1 mr-2 text-xl" /> Super Health Top-Up</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><MdLocalHospital className="inline-block mb-1 mr-2 text-xl" /> Super Health Top-Up</a>
                                         </div>
                                     </div>
                                 </>
@@ -121,11 +121,11 @@ const Hero2 = () => {
                                 <>
                                     <header className='mb-3 font-bold text-lg'>{selectedIcon} Plans</header>
                                     <div className='grid grid-cols-2 gap-6'>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><PiFirstAidKitBold className="inline-block mb-1 mr-2 text-xl" /> Whole Life Insurance</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href=""><PiFirstAidKitBold className="inline-block mb-1 mr-2 text-xl" /> Whole Life Insurance</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><PiBankBold className="inline-block mb-1 mr-2 text-xl" /> Term Life Insurance</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><PiBankBold className="inline-block mb-1 mr-2 text-xl" /> Term Life Insurance</a>
                                         </div>
                                        
                                     </div>
@@ -135,14 +135,14 @@ const Hero2 = () => {
                                 <>
                                     <header className='mb-3 font-bold text-lg'>{selectedIcon} Plans</header>
                                     <div className="grid grid-cols-2 gap-6">
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><FaHome className="inline-block mb-1 mr-2 text-xl"  /> Swagruha Policy </a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><FaHome className="inline-block mb-1 mr-2 text-xl"  /> Swagruha Policy </a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><FaHome className="inline-block mb-1 mr-2 text-xl" /> Home Shield </a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href=""><FaHome className="inline-block mb-1 mr-2 text-xl" /> Home Shield </a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><FaHome className="inline-block mb-1 mr-2 text-xl" /> Suraksha Policy </a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href=""><FaHome className="inline-block mb-1 mr-2 text-xl" /> Suraksha Policy </a>
                                         </div>
                                         
                                     </div>
@@ -152,20 +152,20 @@ const Hero2 = () => {
                                 <>
                                     <header className='mb-3 font-bold text-lg'>{selectedIcon} Plans</header>
                                     <div className="grid grid-cols-2 gap-6">
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"  /> International Travel Insurance</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href=""><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"  /> International Travel Insurance</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"  /> Domestic Travel Insurance</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"  /> Domestic Travel Insurance</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"  />Yatra Bima</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"  />Yatra Bima</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"/> Durgatra Yatra Bima</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl"/> Durgatra Yatra Bima</a>
                                         </div>
-                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href="" onClick={handleClick}><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl" /> Yuva Yatra Bima</a>
+                                        <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white" onClick={handleClick}>
+                                            <a href="" ><MdOutlineFlight className="inline-block mb-1 mr-2 text-xl" /> Yuva Yatra Bima</a>
                                         </div>
                                     </div>
                                 </>
