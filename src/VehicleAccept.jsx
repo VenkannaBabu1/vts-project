@@ -38,9 +38,7 @@ function VehicleAccept() {
         <div className='container mt-0 shadow'>
             <h1 className="text-center h1 mb-1 text-black">Vehicle Policy  Applications</h1>
 
-            {loading ? (
-                <p className="text-center">Loading...</p>
-            ) : (
+           
                 <table className="table table-striped text-center">
                     <thead>
                         <tr className='text-center'>
@@ -59,7 +57,10 @@ function VehicleAccept() {
                         </tr>
                     </thead>
                     <tbody>
-                        {requests && requests.map((req, index) =>
+                    {loading ? (
+                <p className="text-center">Loading...</p>
+            ) : ( requests.length>0?(
+                        requests && requests.map((req, index) =>
                             <tr key={req.id}>
                                 <td style={{ verticalAlign: "middle" }}>{index + 1}</td>
                                 <td style={{ verticalAlign: "middle" }}>{req.email}</td>
@@ -78,10 +79,15 @@ function VehicleAccept() {
                                     <button className='btn btn-success' onClick={() => navigate("/transaction", { state: { policyNo: req.policyNo, type:"VEHICLE" } })}>View Transactions</button>
                                 </td>
                             </tr>
+                        )):(
+                            <tr>
+                                <td>NO Data Found</td>
+                            </tr>
+                        )
                         )}
                     </tbody>
                 </table>
-            )}
+            
         </div>
         </div>
         <Footer/>

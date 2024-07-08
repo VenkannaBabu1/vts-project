@@ -44,8 +44,8 @@ function HealthAccept() {
         <div className='container mt-0 shadow'>
         <h1 className="text-center h1 mb-4 text-black">APPLIED HEALTH POLICIES</h1>
        
-            
-            <table className="table table-striped text-center">
+            <div className='overflow-x-auto'>
+            <table className="table table-striped text-center mb-2">
                 <thead>
                     <tr className='text-center'>
                         <th>S.No</th>
@@ -65,7 +65,7 @@ function HealthAccept() {
                   ):( 
                     requests.length >0 ?(
                     requests.map((req, index) =>
-                        <tr key={req.id} >
+                        <tr key={req.id}  >
                             <td style={{verticalAlign:"middle"}}>{index + 1}</td>
                             <td style={{verticalAlign:"middle"}}>{req.email}</td>
                             <td style={{verticalAlign:"middle"}}>{req.policyId}</td>
@@ -90,6 +90,7 @@ function HealthAccept() {
                   )}
                 </tbody>
             </table>
+            </div>
         </div>
         </div>
         <Footer/>

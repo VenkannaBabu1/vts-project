@@ -42,6 +42,7 @@ function HomeAccept() {
         <div className="container mt-0 shadow">
             <h1 className="text-center h1 mb-0 text-black">APPLIED HOME POLICIES</h1>
 
+            <div className='overflow-x-auto'>
             <table className="table table-striped text-center">
                 <thead>
                     <tr className="text-center">
@@ -95,6 +96,7 @@ function HomeAccept() {
                     )}
                 </tbody>
             </table>
+            </div>
         </div>
         </div>
         <Footer/>

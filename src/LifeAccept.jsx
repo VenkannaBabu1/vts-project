@@ -45,7 +45,7 @@ function LifeAccept() {
         <div className='container mt-0 shadow'>
         <h1 className="text-center h1 mb-4 text-black">APPLIED LIFE POLICIES</h1>
        
-            
+            <div className='overflow-x-auto'>
             <table className="table table-striped text-center">
                 <thead>
                     <tr className='text-center'>
@@ -91,6 +91,7 @@ function LifeAccept() {
                   )}
                 </tbody>
             </table>
+            </div>
         </div></div>
         <Footer/>
         </div>
