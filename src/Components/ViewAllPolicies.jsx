@@ -15,11 +15,11 @@ function AllPolicies() {
   const token = localStorage.getItem("token");
 
   const slideForward = () => {
-    setTx(prevTx => (prevTx > -10 ? prevTx - 10 : prevTx));
+    setTx(prevTx => (prevTx > -100 ? prevTx - 100 : prevTx));
   };
 
   const slideBackward = () => {
-    setTx(prevTx => (prevTx < 10 ? prevTx + 10 : prevTx));
+    setTx(prevTx => (prevTx < 100 ? prevTx + 100 : prevTx));
   };
 
   const [policies, setPolicies] = useState([]);
@@ -72,7 +72,7 @@ function AllPolicies() {
         <img src={next_icon} alt="Next" className="next-btn" onClick={slideForward} />
         <img src={back_icon} alt="Back" className="back-btn" onClick={slideBackward} />
         <div className="slider1">
-          <ul ref={slider} style={{ transform: `translateX(${tx}%)`, transition: 'transform 0.5s ease' }}>
+          <ul ref={slider} style={{ transform: `translateX(${tx}%)`, transition: 'transform 0.5s ease' ,flex: '0 1 33.333%'}} >
             {policies.map((policy, index) => (
               <li key={index}>
                 <div className="slide-card1 ">
