@@ -125,7 +125,8 @@
 .back-btn {
   position: absolute;
   top: 40%;
-  background-color: rgb(50, 10, 248);
+  filter: invert(1);
+  /* filter: brightness(0); */
   border-radius: 10rem;
   transform: translateY(-50%);
   cursor: pointer;
