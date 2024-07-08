@@ -85,7 +85,7 @@ function AllPolicies() {
                       POLICY ID: {policy.policyId}
                     </h2>
                     <h2  className="policy-premium">
-                      PREMIUM: 
+                      PREMIUM: {policy.premium}
                     </h2>
                   </div>
                 </div>
