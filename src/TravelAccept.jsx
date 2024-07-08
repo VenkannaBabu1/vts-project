@@ -41,7 +41,7 @@ function TravelAccept() {
     <div className='approval'>
         <div className='container mt-0 shadow'>
             <h1 className="text-center h1 mb-1 text-black"> Appliedd Travel Policies</h1>
-           
+           <div className='overflow-x-auto'>
                 
                 <table className="table table-striped text-center">
                     <thead>
@@ -96,6 +96,7 @@ function TravelAccept() {
                                           )
                                         )}</tbody>
                 </table>
+                </div>
                 </div>
                 </div>
                 <Footer/>
