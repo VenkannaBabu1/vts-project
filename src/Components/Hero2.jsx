@@ -87,7 +87,7 @@ const Hero2 = () => {
                                     <header className='mb-3 font-bold text-lg'>{selectedIcon} Plans</header>
                                     <div className="grid grid-cols-2 gap-6">
                                         <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
-                                            <a href=""><FaCar className="inline-block mb-1 mr-2 text-xl"  onClick={handleClick}/> 2 Wheeler Policy</a>
+                                            <a href="" onClick={handleClick}><FaCar className="inline-block mb-1 mr-2 text-xl"  /> 2 Wheeler Policy</a>
                                         </div>
                                         <div className="policy1 p-2 border rounded-lg border-slate-500 hover:bg-orange-600 hover:text-white">
                                             <a href=""><FaTruck className="inline-block mb-1 mr-2 text-xl"  onClick={handleClick}/> 4 Wheeler Policy</a>
