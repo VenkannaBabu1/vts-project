@@ -43,10 +43,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
   /* transform: matrix(0,1,1,0,0,0); */
   /* transform: scale(0.7); */
-  transform: skew(-5deg,-10deg);
-  /* transform: rotate(15deg);
+  /* transform: translate(); */
+  /* transform: skew(-5deg,-10deg); */
+  /* transform: rotate(15deg);*/
   
-  transform: translate(-5px,-10px); */
+  
+  transform: translate(-5px,-10px); 
   width: 300px; 
   height: 450px; 
 
