@@ -247,10 +247,9 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <Input placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)}  style={{width:"65%",marginRight:"10px"}}/>
-              <Button type='primary' onClick={generateOtp} disabled={!email} style={{width:"25%"}}>Generate OTP</Button>
-              
+              <Input placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)}  style={{width:"90%"}}/>
             </Form.Item>
+            <Button type='primary' onClick={generateOtp} disabled={!email} style={{width:"15%",marginTop:"30px",marginLeft:"-20px"}}>Generate OTP</Button>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Form.Item
                 name="otp"
