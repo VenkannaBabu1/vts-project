@@ -86,7 +86,7 @@ const Register = () => {
     e.preventDefault();
     console.log("normal", otp);
     console.log("backend otp", originalOtp);
-    if (otp === originalOtp) {
+    if (otp == originalOtp) {
       console.log("normal", otp);
       console.log("backend otp", originalOtp);
       setIsOtpVerified(true);
