@@ -2,7 +2,7 @@
 
 
 
-.container-login {
+.container-login-form {
     background: url(https://lordicon.com/icons/wired/lineal/310-avatar-icon-approved.svg) right top,url(https://www.truid.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftruid-usecases.90d0a50f.gif&w=828&q=75) left  ;
     min-height: 100vh;
     display: flex;
@@ -78,7 +78,7 @@
     /* padding-right:20px ; */
 }
 
-.container-login input[type="email"], input[type="password"] {
+.container-login-form input[type="email"], input[type="password"] {
     height: 45px;
     width: 100%;
     border: none;
@@ -91,7 +91,7 @@
     font-size: 13px;
 }
 
-input[type="password"] {
+.container-login-form input[type="password"] {
     padding-right: 27px;
 
 }

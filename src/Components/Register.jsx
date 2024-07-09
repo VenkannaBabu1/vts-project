@@ -247,9 +247,9 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <Input placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)}  style={{width:"90%"}}/>
+              <Input placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)}  style={{width:"100%"}}/>
             </Form.Item>
-            <Button type='primary' onClick={generateOtp} disabled={!email} style={{width:"15%",marginTop:"30px",marginLeft:"-20px"}}>Generate OTP</Button>
+            <Button type='primary' onClick={generateOtp} disabled={!email} style={{width:"15%",marginTop:"33px",marginRight:"22px"}}>Generate OTP</Button>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Form.Item
                 name="otp"
@@ -259,9 +259,10 @@ const Register = () => {
                 ]}
                 className='form-item'
               >
-                <Input placeholder="Enter OTP" onChange={(e) => setOtp(e.target.value)} style={{width:"75%",marginRight:"15px"}}/>
-                <Button type='primary' onClick={verifyOtp} style={{width:"20%"}}>Verify</Button>
+                <Input placeholder="Enter OTP" onChange={(e) => setOtp(e.target.value)} style={{width:"90%",marginRight:"15px"}}/>
+                
               </Form.Item>
+              <Button type='primary' onClick={verifyOtp} style={{width:"20%",marginTop:"30px",marginLeft:"13px"}}>Verify</Button>
              
             </div>
           </div>
