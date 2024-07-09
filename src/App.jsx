@@ -50,6 +50,7 @@ import TravelPolicyView from "./Components/AdminViewPolicy/TravelPolicyView";
 import FeedbackForm from "./FeedbackForm";
 import Submissions from "./Submissons";
 import WhyChoose from "./Components/WhyChoose";
+import Hospitals from "./Components/Hospitals";
 export const Store = createContext();
 function App() {
   const [tokenDetails, setTokenDetails] = useState(
@@ -67,6 +68,7 @@ function App() {
     <Route path="admin-dashboard" element={<AdminDashboard/>}/>
     <Route path="agent-dashboard" element={<SurveyorDashboard/>}/>
     <Route path="contact-us" element={<ContactUs/>}/>
+    <Route path="hospitals" element={<Hospitals/>}/>
 
     <Route path="all-payments" element={<AdminAllPayments/>}/>
     <Route path="view-all-users" element={<AdminViewAllUsers/>}/>

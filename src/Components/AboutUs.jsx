@@ -37,6 +37,12 @@ const AboutUs = () => {
       info: 'Settlement Ratio',
     },
   ];
+  const handleCardClick = (info) => {
+    if (info === 'Network Hospitals') {
+      window.location.href = '/hospitals';
+    }
+  };
+ 
 
   return (
     <ScrollTrigger onEnter={() => setCounter(true)} onExit={() => setCounter(false)}>
@@ -50,7 +56,7 @@ const AboutUs = () => {
               <div
                 key={index}
                 className="card bg-white shadow-md rounded-lg p-6 flex flex-col items-center text-center transition border-2 border-transparent hover:border-orange-500"
-              >
+                onClick={() => handleCardClick(info.info) }>
                 <img src={info.img} alt={info.info} className="w-16 h-16 mb-4" />
                 <CountUp start={0} end={info.header} delay={0} duration={2.5} className="text-2xl font-bold" />
                 <p className="mt-2 text-gray-700">{info.info}</p>
