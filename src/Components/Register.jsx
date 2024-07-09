@@ -234,13 +234,15 @@ const Register = () => {
             <Form.Item
               name="email"
               label="E-mail"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
               rules={[
                 { type: 'email', message: 'The input is not valid E-mail!' },
                 { required: true, message: 'Please input your E-mail!' },
               ]}
               className='form-item'
             >
-              <Input placeholder="Enter your email" style={{ width: "70%", marginRight: "5px" }} onChange={(e) => setEmail(e.target.value)} />
+              <Input placeholder="Enter your email" style={{ width: "70%", marginRight: "5px" }}  />
               <Button type="primary" onClick={generateOtp} className="submit-btn" style={{ width: "22%", fontSize: "13px" }}>
                 Generate OTP
               </Button>
@@ -253,7 +255,7 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <Input placeholder='Enter the OTP' onChange={(e) => setOtp(e.target.value)} style={{ width: "75%", marginRight: "15px" }} />
+              <Input  placeholder='Enter the OTP' onChange={(e) => setOtp(e.target.value)} style={{ width: "75%", marginRight: "15px" }} />
               <Button type='primary' onClick={verifyOtp} style={{ width: "20%" }}>Verify</Button>
             </Form.Item>
           </div>
