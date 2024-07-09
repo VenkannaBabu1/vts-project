@@ -5,7 +5,6 @@ import './Register.css';
 import moment from 'moment';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 const { Option } = Select;
 
@@ -87,7 +86,7 @@ const Register = () => {
     e.preventDefault();
     console.log("normal", otp);
     console.log("backend otp", originalOtp);
-    if (otp == originalOtp) {
+    if (otp === originalOtp) {
       console.log("normal", otp);
       console.log("backend otp", originalOtp);
       setIsOtpVerified(true);
@@ -242,28 +241,24 @@ const Register = () => {
             <Form.Item
               name="email"
               label="E-mail"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
               rules={[
                 { type: 'email', message: 'The input is not valid E-mail!' },
                 { required: true, message: 'Please input your E-mail!' },
               ]}
               className='form-item'
             >
-              <Input placeholder="Enter your email" />
+              <Input placeholder="Enter your email" onChange={(e) => setEmail(e.target.value)} />
             </Form.Item>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <Form.Item
                 name="otp"
                 label="Enter OTP"
-                onChange={(e) => setOtp(e.target.value)}
-                value={otp}
                 rules={[
                   { required: true, message: 'Please input your OTP!' },
                 ]}
                 className='form-item'
               >
-                <Input placeholder="Enter OTP" />
+                <Input placeholder="Enter OTP" onChange={(e) => setOtp(e.target.value)} />
               </Form.Item>
               <Button onClick={generateOtp} disabled={!email}>Generate OTP</Button>
               <Button onClick={verifyOtp}>Verify</Button>
