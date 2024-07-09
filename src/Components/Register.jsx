@@ -5,6 +5,7 @@ import './Register.css';
 import moment from 'moment';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const { Option } = Select;
 
@@ -46,7 +47,6 @@ const states = [
   { value: 'PY', label: 'Puducherry' },
 ];
 
-
 const formItemLayout = {
   labelCol: { xs: { span: 24 }, sm: { span: 24 } },
   wrapperCol: { xs: { span: 24 }, sm: { span: 24 } },
@@ -65,11 +65,12 @@ const Register = () => {
   const [originalOtp, setOriginalOtp] = useState('');
   const [isOtpVerified, setIsOtpVerified] = useState(false);
 
-  const generateOtp = async () => {
+  const generateOtp = async (e) => {
+    e.preventDefault();
     try {
       const res = await axios.get(`${import.meta.env.VITE_URL}/otp/generate-register-otp/${email}`);
       setOriginalOtp(res.data);
-      console.log(res.data);
+      console.log("response", res.data);
       notification.success({
         message: 'OTP Sent',
         description: 'OTP has been sent to your email.',
@@ -80,10 +81,15 @@ const Register = () => {
         description: 'Error generating OTP. Please try again.',
       });
     }
-  };
+  }
 
-  const verifyOtp = () => {
+  const verifyOtp = (e) => {
+    e.preventDefault();
+    console.log("normal", otp);
+    console.log("backend otp", originalOtp);
     if (otp == originalOtp) {
+      console.log("normal", otp);
+      console.log("backend otp", originalOtp);
       setIsOtpVerified(true);
       notification.success({
         message: 'Verified Successfully',
@@ -91,9 +97,13 @@ const Register = () => {
     } else {
       notification.error({ message: "Invalid OTP" });
     }
-  };
+  }
 
   const onFinish = async (values) => {
+    console.log('Received values of form: ', values);
+
+    values.dob = values.dob.format('YYYY-MM-DD');
+
     if (!isOtpVerified) {
       notification.error({
         message: 'OTP Verification',
@@ -103,11 +113,22 @@ const Register = () => {
     }
 
     try {
-      values.dob = values.dob.format('YYYY-MM-DD');
-      const response = await axios.post(`${import.meta.env.VITE_URL}/user/register`, {
-        ...values,
-        email,
-      });
+      const response = await axios.post(`${import.meta.env.VITE_URL}/user/register`,
+        {
+          firstname: values.firstname,
+          lastname: values.lastname,
+          dob: values.dob,
+          email: values.email,
+          phno: values.phno,
+          password: values.password,
+          gender: values.gender,
+          address: values.address,
+          adhaarPan: values.adhaarPan,
+          state: values.state,
+          pincode: values.pincode
+        }
+      );
+      console.log(response.data);
       if (response.data.id) {
         notification.success({
           message: 'Registration Successful',
@@ -123,7 +144,7 @@ const Register = () => {
     } catch (error) {
       notification.error({
         message: 'Registration Error',
-        description: error.response?.data?.message || 'An error occurred during registration. Please try again.',
+        description: error.response.data.message || 'An error occurred during registration. Please try again.',
       });
     }
   };
@@ -221,37 +242,43 @@ const Register = () => {
             <Form.Item
               name="email"
               label="E-mail"
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
               rules={[
                 { type: 'email', message: 'The input is not valid E-mail!' },
                 { required: true, message: 'Please input your E-mail!' },
               ]}
               className='form-item'
             >
-              <Input placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ width: "70%", marginRight: "5px" }} />
-              <Button type="primary" onClick={generateOtp} className="submit-btn" style={{ width: "22%", fontSize: "13px" }}>
-                Generate OTP
-              </Button>
+              <Input placeholder="Enter your email" />
             </Form.Item>
-            <Form.Item
-              name="otp"
-              label="Enter OTP"
-              rules={[
-                { required: true, message: 'Please input your OTP!' },
-              ]}
-              className='form-item'
-            >
-              <Input placeholder='Enter the OTP' value={otp} onChange={(e) => setOtp(e.target.value)} style={{ width: "75%", marginRight: "15px" }} />
-              <Button type='primary' onClick={verifyOtp} style={{ width: "20%" }}>Verify</Button>
-            </Form.Item>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <Form.Item
+                name="otp"
+                label="Enter OTP"
+                onChange={(e) => setOtp(e.target.value)}
+                value={otp}
+                rules={[
+                  { required: true, message: 'Please input your OTP!' },
+                ]}
+                className='form-item'
+              >
+                <Input placeholder="Enter OTP" />
+              </Form.Item>
+              <Button onClick={generateOtp} disabled={!email}>Generate OTP</Button>
+              <Button onClick={verifyOtp}>Verify</Button>
+            </div>
           </div>
           <div className="form-input">
             <Form.Item
               name="gender"
               label="Gender"
-              rules={[{ required: true, message: 'Please select your gender!' }]}
+              rules={[
+                { required: true, message: 'Please select your gender!' },
+              ]}
               className='form-item'
             >
-              <Select name="gender" placeholder="Select your gender">
+              <Select placeholder="Select your gender">
                 <Option value="male">Male</Option>
                 <Option value="female">Female</Option>
                 <Option value="other">Other</Option>
@@ -262,35 +289,41 @@ const Register = () => {
               name="dob"
               label="Date of Birth"
               rules={[
-                { required: true, message: 'Please input your date of birth!' },
+                { required: true, message: 'Please select your date of birth!' },
                 { validator: validateDOB },
               ]}
               className='form-item'
             >
-              <DatePicker format="DD-MM-YYYY" style={{ width: '100%' }} placeholder="Select Date of Birth" />
+              <DatePicker
+                style={{ width: '100%' }}
+                placeholder="Select date of birth"
+                format="DD-MM-YYYY"
+                disabledDate={(current) => current && current > moment().endOf('day')}
+              />
             </Form.Item>
           </div>
           <div className="form-input">
             <Form.Item
               name="state"
               label="State"
-              rules={[{ required: true, message: 'Please select your state!' }]}
+              rules={[
+                { required: true, message: 'Please select your state!' },
+              ]}
               className='form-item'
             >
               <Select placeholder="Select your state">
                 {states.map((state) => (
-                  <Option key={state.value} value={state.value}>
-                    {state.label}
-                  </Option>
+                  <Option key={state.value} value={state.label}>{state.label}</Option>
                 ))}
               </Select>
             </Form.Item>
+
             <Form.Item
               name="pincode"
               label="Pincode"
               rules={[
                 { required: true, message: 'Please input your pincode!' },
-                { len: 6, message: 'Pincode must be 6 digits long!' },
+                { pattern: /^[1-9][0-9]{5}$/, message: 'Pincode must be 6 digits long!' },
               ]}
               className='form-item'
             >
@@ -301,31 +334,33 @@ const Register = () => {
             <Form.Item
               name="address"
               label="Address"
-              rules={[{ required: true, message: 'Please input your address!' }]}
+              rules={[
+                { required: true, message: 'Please input your address!' },
+              ]}
               className='form-item'
             >
-              <Input.TextArea showCount maxLength={200} placeholder="Enter your address" />
+              <Input.TextArea placeholder="Enter your address" maxLength={200} />
             </Form.Item>
+
             <Form.Item
               name="phno"
               label="Phone Number"
               rules={[
                 { required: true, message: 'Please input your phone number!' },
-                { len: 10, message: 'Phone number must contain 10 digits' },
+                { pattern: /^\d{10}$/, message: 'Phone number must be 10 digits long!' },
               ]}
               className='form-item'
             >
-              <Input addonBefore={prefixSelector} placeholder="Enter your phone number" />
+              <Input addonBefore={prefixSelector} style={{ width: '100%' }} placeholder="Enter your phone number" />
             </Form.Item>
           </div>
           <div className="form-input">
             <Form.Item
               name="idType"
               label="ID Type"
-              rules={[{ required: true, message: 'Please select ID type!' }]}
               className='form-item'
             >
-              <Radio.Group onChange={handleIdTypeChange} value={idType}>
+              <Radio.Group value={idType} onChange={handleIdTypeChange}>
                 <Radio value="adhaar">Aadhar</Radio>
                 <Radio value="pan">PAN</Radio>
               </Radio.Group>
@@ -333,14 +368,14 @@ const Register = () => {
 
             <Form.Item
               name="adhaarPan"
-              label={idType.charAt(0).toUpperCase() + idType.slice(1) + ' Number'}
+              label={idType === 'adhaar' ? 'Aadhar Number' : 'PAN Number'}
               rules={[
-                { required: true, message: `Please input your ${idType} number!` },
-                validateIdNumber(),
+                { required: true, message: `Please input your ${idType === 'adhaar' ? 'Aadhar' : 'PAN'} number!` },
+                validateIdNumber,
               ]}
               className='form-item'
             >
-              <Input placeholder={`Enter your ${idType} number`} />
+              <Input placeholder={`Enter your ${idType === 'adhaar' ? 'Aadhar' : 'PAN'} number`} />
             </Form.Item>
           </div>
           <div className="form-input">
@@ -349,15 +384,13 @@ const Register = () => {
               label="Password"
               rules={[
                 { required: true, message: 'Please input your password!' },
-                {
-                  pattern: /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
-                  message: 'Password must be exactly 8 characters long, including at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&).'
-                },
+                { min: 8, message: 'Password must be at least 8 characters long!' },
+                { pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/, message: 'Password must contain at least one letter and one number!' },
               ]}
               hasFeedback
               className='form-item'
             >
-              <Input.Password placeholder="Enter your password" className='pwd-input' />
+              <Input.Password placeholder="Enter your password" />
             </Form.Item>
 
             <Form.Item
@@ -372,42 +405,34 @@ const Register = () => {
                     if (!value || getFieldValue('password') === value) {
                       return Promise.resolve();
                     }
-                    return Promise.reject(new Error('The new password that you entered does not match!'));
+                    return Promise.reject(new Error('The two passwords do not match!'));
                   },
                 }),
               ]}
               className='form-item'
             >
-              <Input.Password placeholder="Confirm your password" className='pwd-input' />
+              <Input.Password placeholder="Confirm your password" />
             </Form.Item>
           </div>
-
           <Form.Item
-            name="terms"
+            name="agreement"
             valuePropName="checked"
             rules={[
               {
-                validator: (_, value) =>
-                  value ? Promise.resolve() : Promise.reject(new Error('You must accept the terms and conditions!')),
+                validator: (_, value) => value ? Promise.resolve() : Promise.reject(new Error('Please accept the terms and conditions')),
               },
             ]}
+            {...tailFormItemLayout}
           >
-            <div className="checkbox-container">
-              <Checkbox>
-                I have read and agree to the 
-              </Checkbox>
-              <a href="#">terms and conditions</a>
-            </div>
+            <Checkbox>
+              I have read and agree to the <Link to="/terms-and-conditions" target="_blank" rel="noopener noreferrer">terms and conditions</Link>
+            </Checkbox>
           </Form.Item>
-
           <Form.Item {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit" className="submit-button">
+            <Button type="primary" htmlType="submit" disabled={!isOtpVerified}>
               Register
             </Button>
           </Form.Item>
-          <div className='signin-btn'>
-            <Link to="/login">Already have an account? Sign in</Link>
-          </div>
         </Form>
       </div>
     </div>
