@@ -69,6 +69,7 @@ const Register = () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_URL}/otp/generate-register-otp/${email}`);
       setOriginalOtp(res.data);
+      console.log("response",res.data);
       notification.success({
         message: 'OTP Sent',
         description: 'OTP has been sent to your email.',
@@ -83,6 +84,8 @@ const Register = () => {
 
   const verifyOtp = () => {
   if (typeof otp === 'string' && typeof originalOtp === 'string' && otp.trim() === originalOtp.trim()) {
+    console.log("normal",otp);
+    console.log("backend otp",originalOtp);
     setIsOtpVerified(true);
     toast.success('OTP verified successfully!');
   } else {
