@@ -259,10 +259,10 @@ const Register = () => {
                 ]}
                 className='form-item'
               >
-                <Input placeholder="Enter OTP" onChange={(e) => setOtp(e.target.value)} style={{width:"90%",marginRight:"15px"}}/>
+                <Input placeholder="Enter OTP" onChange={(e) => setOtp(e.target.value)} style={{width:"90%",marginRight:"10px"}}/>
                 
               </Form.Item>
-              <Button type='primary' onClick={verifyOtp} style={{width:"20%",marginTop:"30px",marginLeft:"13px"}}>Verify</Button>
+              <Button type='primary' onClick={verifyOtp} style={{width:"20%",marginTop:"30px",marginLeft:"9px",marginRight:"10px"}}>Verify</Button>
              
             </div>
           </div>
