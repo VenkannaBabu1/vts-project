@@ -82,13 +82,14 @@ const Register = () => {
   }
 
   const verifyOtp = () => {
-    if (otp.trim() === originalOtp.trim()) {
-      setIsOtpVerified(true);
-      toast.success('OTP verified successfully!');
-    } else {
-      toast.error('Invalid OTP');
-    }
+  if (typeof otp === 'string' && typeof originalOtp === 'string' && otp.trim() === originalOtp.trim()) {
+    setIsOtpVerified(true);
+    toast.success('OTP verified successfully!');
+  } else {
+    toast.error('Invalid OTP');
   }
+}
+
 
   const onFinish = async (values) => {
     console.log('Received values of form: ', values);
