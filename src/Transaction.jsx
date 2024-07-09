@@ -109,7 +109,6 @@ const AcceptPolicyAgent = () => {
               <th>Policy Name</th>
               <th>Policy Id</th>
               <th>Policy No</th>
-             
               <th>Amount</th>
               <th>Transaction Id</th>
               <th>Reference Id</th>
