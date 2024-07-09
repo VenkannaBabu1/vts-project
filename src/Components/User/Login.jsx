@@ -72,7 +72,7 @@ const Login = () => {
         <>
             <ToastContainer />
             <div className="container-login">
-                <div className="card">
+                <div className="cardLogin">
                     <div className="text">
                         <h3>Welcome Back</h3>
                         <p>Enter your credentials to access your account.</p>

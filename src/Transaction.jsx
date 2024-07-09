@@ -15,6 +15,8 @@ const AcceptPolicyAgent = () => {
   const [policyNo, setPolicyNo] = useState(location.state.policyNo);
   const [type, setType] = useState("");
   const token = localStorage.getItem("token");
+  console.log(data);
+  console.log("policy data",policyData);
 
   useEffect(() => {
     const determineType = () => {
@@ -54,6 +56,7 @@ const AcceptPolicyAgent = () => {
         }
       );
       setData(response.data);
+      console.log(response.data);
     } catch (error) {
       console.error('Error fetching Users:', error);
     }
@@ -106,6 +109,7 @@ const AcceptPolicyAgent = () => {
               <th>Policy Name</th>
               <th>Policy Id</th>
               <th>Policy No</th>
+              <th>Amount</th>
               <th>Transaction Id</th>
               <th>Reference Id</th>
               <th>Image Proof</th>
@@ -119,6 +123,7 @@ const AcceptPolicyAgent = () => {
                 <td>{user.policyName}</td>
                 <td>{user.policyId}</td>
                 <td>{user.policyNo}</td>
+                <td >{user.amount}</td>
                 <td>{user.transactionId}</td>
                 <td>{user.referenceId}</td>
                 <td>

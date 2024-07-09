@@ -8,25 +8,31 @@ const Accordion = () => {
         {
             id: 1,
             question: "Can a duplicate Policy Be obtained?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            answer: "Yes, please approach the same office which has issued the policy, with a written request . A nominal fee is charged for issuing duplicate policy copy."
         },
         {
             id: 2,
-            question: "What is lorem ipsum?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            question: "Where I can renew my Policy?",
+            answer: "Existing insurance will be renewed by the same office. Please contact the office concerned for exact premium and pay it to the same office. Do not send your premium to any other office or to the Regional Office/Head Office. You can also log on to our portal and register yourself as our customer and renew package policies of private cars and two wheelers from our portal itself."
+        },
+        {
+            id: 3,
+            question: "Where can I  transfer my insurance to the purchaser of my vehicle?",
+            answer: "Yes, the insurance can be transferred to the buyer of the vehicle, provided the seller gives in writing to the insurance company. A fresh proposal form needs to be filled in. There is a nominal fee charged for transfer of insurance. Please contact the concerned insurance office for guidance and terms and conditions."
         }
     ];
 
     const healthData = [
         {
             id: 1,
-            question: "What does health insurance cover?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            question: "What is the cancellation Policy?",
+            answer: "Cancellation on the request of Insured or by the Company after giving 30 days."
         },
         {
             id: 2,
-            question: "How to claim health insurance?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            question: "What is Co-Payment ?",
+            answer: <><li>10% of each claim as Co-payment only in Silver plan</li>
+            <li>20% compulsory co-payment in cases where Entry Age is above 65 years</li></>
         }
     ];
 
@@ -34,25 +40,29 @@ const Accordion = () => {
         {
             id: 1,
             question: "What is covered under shopkeeper insurance?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            answer: <><li>
+            Fire Loss to the Contents (Stock in Trade & FFF). Perils as per Standard Fire & Special Perils Policy including Earthquake.</li>
+            <li>House Breaking Loss/damage to contents (excluding Money and Valuables) by Housebreaking excluding where any partner or any employee of the insured or member of the insured family is concerned as principal or accessory.</li></>
         },
         {
             id: 2,
-            question: "How to renew shopkeeper insurance?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            question: "How to lodge claim?",
+            answer: <>
+            <li>Please ensure that no bribe is given to anyone on account of settlement of claim. Please report any such demand immediately to the Company.</li>
+            <li>Take necessary steps to minimize loss and keep the Insurance Company apprised.</li></>
         }
     ];
 
     const accidentData = [
         {
             id: 1,
-            question: "What does personal accident insurance cover?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            question: "Is there any discount for getting family cover",
+            answer: "Yes, depending upon the number of persons covered, family discount is granted.."
         },
         {
             id: 2,
-            question: "How to file a claim for personal accident insurance?",
-            answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            question: "What is Personal Accident Insurance?",
+            answer: "Personal Accident is an insurance cover wherein, in the event of the person sustaining bodily injuries resulting solely and directly from an accident caused by EXTERNAL, VIOLENT & VISIBLE means , resulting into death or disablement.."
         }
     ];
 
@@ -85,7 +95,7 @@ const Accordion = () => {
                 <div className={`cursor-pointer border p-4 rounded transition duration-300 ease-in-out hover:text-orange-500 hover:border-orange-500 ${insuranceData === shopkeeperData ? 'text-orange-500 border-orange-500' : ''}`} onClick={() => handleInsuranceClick(shopkeeperData)}>
                     <h1 className="text-xl font-semibold">Shopkeeper Insurance</h1>
                 </div>
-                <div className={`cursor-pointer border p-4 rounded transition duration-300 ease-in-out hover:text-orange-500 hover:border-orange-500 ${insuranceData === accidentData ? 'text-orange-500 border-orange-500' : ''}`} onClick={() => handleInsuranceClick(accidentData)}>
+                <div className={`cursor-pointer border p-4 rounded transition duration-300 ease-in-out  hover:text-orange-500 hover:border-orange-500 ${insuranceData === accidentData ? 'text-orange-500 border-orange-500' : ''}`} onClick={() => handleInsuranceClick(accidentData)}>
                     <h1 className="text-xl font-semibold">Personal Accident Insurance</h1>
                 </div>
             </div>

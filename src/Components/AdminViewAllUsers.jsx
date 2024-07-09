@@ -39,13 +39,14 @@ function AdminViewAllUsers() {
         <div className='AdminViewAllUsers'>
             <h1 className="text-center mb-1 h1 text-black">ALL USERS</h1>
             <div className='container mt-4 shadow p-3 text-center'>
-                <table className="table table-striped text-center pt-3">
+            <div className="overflow-x-auto">
+                <table className="table table-striped table-responsive text-center pt-3">
                     <thead className='p-2'>
                         <tr className='text-center p-4'>
                             <th>S.No</th>
                             <th>First Name</th>
                             <th>Last Name</th>
-                            <th>Date of Birth</th>
+                            <th>DOB</th>
                             <th>Email</th>
                             <th>Phone Number</th>
                             <th>Gender</th>
@@ -81,6 +82,7 @@ function AdminViewAllUsers() {
                         )}
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         <Footer/>

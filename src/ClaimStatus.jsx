@@ -21,7 +21,7 @@ const UserClaimStatus = () => {
           Authorization: `Bearer ${token}`,
         }
       });
-      console.log(response.data); // Check the structure of the response
+      console.log(response.data);
       setData(response.data);
     } catch (error) {
       console.error('Error fetching users:', error);

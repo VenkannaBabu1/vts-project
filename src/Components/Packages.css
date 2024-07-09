@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+.PACKAGES .heading {
+    padding-top: 5rem;
+    text-align: center;
+    color: #333;
+    text-decoration: wavy;
+}
+:root {
+    --orange: #FFA500;
+    
+}
+
+
+.PACKAGES .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.PACKAGES .box-container .box-pack {
+    flex: 1 1 calc(33.333% - 2rem);
+    gap: 10px;
+    border-radius: .5rem;
+    font-family: "Poppins";
+    height: auto;
+    max-width: calc(33.333% - 2rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.PACKAGES .box-container .box-pack:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.222);
+    /* transform: matrix(0,1,1,0,0,0); */
+    transform: scale(0.9);
+    cursor: pointer;
+    /* transform: translate(); */
+    /* transform: skew(-5deg,-10deg); */
+    /* transform: rotate(15deg);*/
+    
+    
+    /* transform: translate(-5px,-10px);  */
+   
+  
+  }
+
+.PACKAGES .box-container .box-pack img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.PACKAGES .box-container .box-pack .content-p {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.PACKAGES .box-container .box-pack .content-p h3 {
+    font-size: 1.5rem;
+    color: #f0e9e9;
+}
+
+.PACKAGES .box-container .box-pack .content-p h3 i {
+    color: var(--orange);
+}
+
+.PACKAGES .box-container .box-pack .content-p p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding: 0.5rem 0;
+}
+
+.PACKAGES .box-container .box-pack .content-p .stars i {
+    font-size: 1.2rem;
+    color: var(--orange);
+}
+
+.PACKAGES .box-container .box-pack .content-p .price {
+    font-size: 1.5rem;
+    color: #333;
+    padding-top: 0.5rem;
+}
+
+.PACKAGES .box-container .box-pack .content-p .price span {
+    color: #ffffff;
+    font-size: 1rem;
+    /* text-decoration: line-through; */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .PACKAGES .box-container .box-pack-p {
+        flex: 1 1 calc(50% - 2rem);
+        max-width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .PACKAGES .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .PACKAGES .box-container .box-pack {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

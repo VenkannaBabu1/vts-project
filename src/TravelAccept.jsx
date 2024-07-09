@@ -7,7 +7,7 @@ import './approval.css';
 
 function TravelAccept() {
     const [requests, setRequests] = useState([]);
-    const [loading, setLoading] = useState(true); // Loading state
+    const [loading, setLoading] = useState(true); 
     const navigate = useNavigate();
     const token = localStorage.getItem("token");
 
@@ -24,10 +24,11 @@ function TravelAccept() {
                 }
             });
             setRequests(response.data);
-            setLoading(false); // Data fetched, set loading to false
+            setLoading(false);
+            console.log(response.data);
         } catch (error) {
             console.log("fetching data error", error);
-            setLoading(false); // Set loading to false on error
+            setLoading(false); 
         }
     }
 
@@ -39,12 +40,12 @@ function TravelAccept() {
             <UserNav />
     <div className='approval'>
         <div className='container mt-0 shadow'>
-            <h1 className="text-center h1 mb-1 text-black"> Appliedd Travel Policies</h1>
-           
+            <h1 className="text-center h1 mb-1 text-black"> Applied Travel Policies</h1>
+           <div className='overflow-x-auto'>
                 
                 <table className="table table-striped text-center">
                     <thead>
-                        <tr className='text-center'>
+                        <tr className='text-center' style={{textTransform:"capitalize"}}>
                             <th>S.No</th>
                             <th>Email</th>
                             <th>Policy Id</th>
@@ -62,7 +63,7 @@ function TravelAccept() {
                     </thead>
                     <tbody>
                   {loading ? (
-                    <tr><td colSpan={9}>loading Data.....</td></tr>
+                    <tr><td colSpan={13}>loading Data.....</td></tr>
                   ):( 
                     requests.length >0 ?(
                         requests.map((req, index) =>
@@ -75,11 +76,12 @@ function TravelAccept() {
                                 <td  style={{verticalAlign:"middle"}}>{req.modeOfTravel}</td>
                                 <td  style={{verticalAlign:"middle"}}>{req.ticketId}</td>
                                 <td  style={{verticalAlign:"middle"}}>{req.nomineeName}</td>
-                                <td style={{verticalAlign:"middle"}}>{req.nomineeAge}</td>
+                                
                                 <td style={{verticalAlign:"middle"}}>{req.nomineeRelation}</td>
-                                 <td style={{verticalAlign:"middle"}}>{req. nomineeAadharnumber}</td>
-                                                               <td style={{verticalAlign:"middle"}}>
-                                    <img src={`data:image/png;base64,${req.documentimage}`} alt="Claim" className="rounded-circle" />
+                                <td style={{verticalAlign:"middle"}}>{req.nomineeAge}</td>
+                                <td style={{verticalAlign:"middle"}}>{req.nomineeAadharNo}</td>
+                               <td style={{verticalAlign:"middle"}}>
+                                    <img src={`data:image/png;base64,${req.documentimage}`} alt="Claim" className="rounded" />
                                 </td>
                                 <td style={{verticalAlign:"middle"}}>
                                           <button className='btn btn-success' onClick={() => navigate("/transaction",{state:{policyNo:req.policyNo, type:"TRAVEL"}})}>View Transactions</button>
@@ -94,6 +96,7 @@ function TravelAccept() {
                                           )
                                         )}</tbody>
                 </table>
+                </div>
                 </div>
                 </div>
                 <Footer/>

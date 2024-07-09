@@ -49,7 +49,7 @@ const MyPolicieUser = () => {
 
   const handleClaim = (policyId, policyNo, policyName) => {
     console.log(`Claiming for policy with No: ${policyNo}`);
-    navigate("/claims", { state: { policyId: policyId, policyNo: policyNo, policyName : policyName} });
+    navigate("/claims", { state: { policyId: policyId, policyNo: policyNo, policyName :policyName} });
     
   };
 
@@ -67,7 +67,7 @@ const MyPolicieUser = () => {
             className={`card ${expandedCardId === policy.policyNo ? 'expanded' : ''}`}
             onClick={() => handleCardClick(policy.policyNo)}
           >
-            <img className="card-img-top" src='placeholder-image.png' alt="Card cap" />
+            <img className="card-img-top" src={policy.documentimage ? `data:image/png;base64,${policy.documentimage}` : 'placeholder-image.png'} alt="Card cap" />
             <div className="card-body">
               <h5 className="card-title">{policy.policyName}</h5>
               <p className="card-text">Policy ID: {policy.policyId}</p>
@@ -93,6 +93,7 @@ const MyPolicieUser = () => {
             {data.map((policy) => (
               policy.policyNo === expandedCardId && (
                 <div key={policy.policyNo} className="card expanded-card">
+                    <img className="card-img-top" src={policy.documentimage ? `data:image/png;base64,${policy.documentimage}` : 'placeholder-image.png'} alt="Card image cap" />
                   <div className="card-body">
                     <h5 className="card-title">{policy.policyName}</h5>
                     <p className="card-text">Policy ID: {policy.policyId}</p>

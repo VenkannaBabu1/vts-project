@@ -2,8 +2,11 @@ import React from 'react';
 import { IoMdPaperPlane } from "react-icons/io";
 import { MdOutlineMail } from "react-icons/md";
 import Footer from "./Footer";
+import { useNavigate } from 'react-router-dom';
 
 const ContactUs = () => {
+    const navigate=useNavigate();
+
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
             <div className="max-w-4xl w-full p-8 bg-white shadow-lg rounded-lg mt-8">
@@ -11,7 +14,8 @@ const ContactUs = () => {
                     <h1 className="text-4xl font-bold text-center">Contact Us</h1>
                     <p className="text-center text-gray-600 mt-2">
                         Let’s talk about your business ideas, and our expert team will help you create the software of
-                        <br /> your dreams. You can expect to hear from us within 5 business hours.
+                        <br />
+                         your dreams. You can expect to hear from us within 5 business hours.
                     </p>
                 </div>
                 <div className="form mb-8">
@@ -27,7 +31,7 @@ const ContactUs = () => {
                     <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">Message</label>
                     <textarea id="message" rows={5} className="w-full bg-gray-200 rounded-md py-3 px-4 mb-6 focus:outline-none focus:bg-white focus:border-blue-500"></textarea>
 
-                    <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:shadow-outline">
+                    <button onClick={()=> navigate('/') } className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-md focus:outline-none focus:shadow-outline">
                         Submit
                     </button>
                 </div>
