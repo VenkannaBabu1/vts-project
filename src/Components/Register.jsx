@@ -47,7 +47,7 @@ const Register = () => {
   };
 
   const verifyOtp = () => {
-    if (otp === originalOtp) {
+    if (otp == originalOtp) {
       setIsOtpVerified(true);
       notification.success({
         message: 'Verified Successfully',
