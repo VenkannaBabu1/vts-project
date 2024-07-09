@@ -85,7 +85,7 @@ const Register = () => {
   const verifyOtp = () => {
     console.log("normal",otp);
     console.log("backend otp",originalOtp);
-  if (typeof otp === 'string' && typeof originalOtp === 'string' && otp.trim() === originalOtp.trim()) {
+  if ( otp == originalOtp ){
     console.log("normal",otp);
     console.log("backend otp",originalOtp);
     setIsOtpVerified(true);
