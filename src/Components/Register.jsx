@@ -5,46 +5,11 @@ import './Register.css';
 import moment from 'moment';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 
 const { Option } = Select;
 
 const states = [
-  { value: 'AP', label: 'Andhra Pradesh' },
-  { value: 'AR', label: 'Arunachal Pradesh' },
-  { value: 'AS', label: 'Assam' },
-  { value: 'BR', label: 'Bihar' },
-  { value: 'CG', label: 'Chhattisgarh' },
-  { value: 'GA', label: 'Goa' },
-  { value: 'GJ', label: 'Gujarat' },
-  { value: 'HR', label: 'Haryana' },
-  { value: 'HP', label: 'Himachal Pradesh' },
-  { value: 'JK', label: 'Jammu and Kashmir' },
-  { value: 'JH', label: 'Jharkhand' },
-  { value: 'KA', label: 'Karnataka' },
-  { value: 'KL', label: 'Kerala' },
-  { value: 'MP', label: 'Madhya Pradesh' },
-  { value: 'MH', label: 'Maharashtra' },
-  { value: 'MN', label: 'Manipur' },
-  { value: 'ML', label: 'Meghalaya' },
-  { value: 'MZ', label: 'Mizoram' },
-  { value: 'NL', label: 'Nagaland' },
-  { value: 'OR', label: 'Odisha' },
-  { value: 'PB', label: 'Punjab' },
-  { value: 'RJ', label: 'Rajasthan' },
-  { value: 'SK', label: 'Sikkim' },
-  { value: 'TN', label: 'Tamil Nadu' },
-  { value: 'TG', label: 'Telangana' },
-  { value: 'TR', label: 'Tripura' },
-  { value: 'UT', label: 'Uttarakhand' },
-  { value: 'UP', label: 'Uttar Pradesh' },
-  { value: 'WB', label: 'West Bengal' },
-  { value: 'AN', label: 'Andaman and Nicobar Islands' },
-  { value: 'CH', label: 'Chandigarh' },
-  { value: 'DN', label: 'Dadra and Nagar Haveli and Daman and Diu' },
-  { value: 'DL', label: 'Delhi' },
-  { value: 'LD', label: 'Lakshadweep' },
-  { value: 'PY', label: 'Puducherry' },
+  // ... your states array ...
 ];
 
 const formItemLayout = {
@@ -65,12 +30,10 @@ const Register = () => {
   const [originalOtp, setOriginalOtp] = useState('');
   const [isOtpVerified, setIsOtpVerified] = useState(false);
 
-  const generateOtp = async (e) => {
-    e.preventDefault();
+  const generateOtp = async () => {
     try {
       const res = await axios.get(`${import.meta.env.VITE_URL}/otp/generate-register-otp/${email}`);
       setOriginalOtp(res.data);
-      console.log("response",res.data);
       notification.success({
         message: 'OTP Sent',
         description: 'OTP has been sent to your email.',
@@ -81,31 +44,20 @@ const Register = () => {
         description: 'Error generating OTP. Please try again.',
       });
     }
-  }
+  };
 
-  const verifyOtp = (e) => {
-    e.preventDefault();
-    console.log("normal",otp);
-    console.log("backend otp",originalOtp);
-  if ( otp == originalOtp ){
-    console.log("normal",otp);
-    console.log("backend otp",originalOtp);
-    setIsOtpVerified(true);
-   notification.success({
+  const verifyOtp = () => {
+    if (otp === originalOtp) {
+      setIsOtpVerified(true);
+      notification.success({
         message: 'Verified Successfully',
-        
       });
-  } else {
-   notification.error({message:"Invalid OTP"});
-  }
-}
-
+    } else {
+      notification.error({ message: "Invalid OTP" });
+    }
+  };
 
   const onFinish = async (values) => {
-    console.log('Received values of form: ', values);
-
-    values.dob = values.dob.format('YYYY-MM-DD');
-
     if (!isOtpVerified) {
       notification.error({
         message: 'OTP Verification',
@@ -115,22 +67,11 @@ const Register = () => {
     }
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_URL}/user/register`,
-        {
-          firstname: values.firstname,
-          lastname: values.lastname,
-          dob: values.dob,
-          email: values.email,
-          phno: values.phno,
-          password: values.password,
-          gender: values.gender,
-          address: values.address,
-          adhaarPan: values.adhaarPan,
-          state: values.state,
-          pincode: values.pincode
-        }
-      );
-      console.log(response.data);
+      values.dob = values.dob.format('YYYY-MM-DD');
+      const response = await axios.post(`${import.meta.env.VITE_URL}/user/register`, {
+        ...values,
+        email,
+      });
       if (response.data.id) {
         notification.success({
           message: 'Registration Successful',
@@ -146,7 +87,7 @@ const Register = () => {
     } catch (error) {
       notification.error({
         message: 'Registration Error',
-        description: error.response.data.message || 'An error occurred during registration. Please try again.',
+        description: error.response?.data?.message || 'An error occurred during registration. Please try again.',
       });
     }
   };
@@ -244,15 +185,13 @@ const Register = () => {
             <Form.Item
               name="email"
               label="E-mail"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
               rules={[
                 { type: 'email', message: 'The input is not valid E-mail!' },
                 { required: true, message: 'Please input your E-mail!' },
               ]}
               className='form-item'
             >
-              <Input placeholder="Enter your email" style={{ width: "70%", marginRight: "5px" }}  />
+              <Input placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ width: "70%", marginRight: "5px" }} />
               <Button type="primary" onClick={generateOtp} className="submit-btn" style={{ width: "22%", fontSize: "13px" }}>
                 Generate OTP
               </Button>
@@ -265,7 +204,7 @@ const Register = () => {
               ]}
               className='form-item'
             >
-              <Input  placeholder='Enter the OTP' onChange={(e) => setOtp(e.target.value)} style={{ width: "75%", marginRight: "15px" }} />
+              <Input placeholder='Enter the OTP' value={otp} onChange={(e) => setOtp(e.target.value)} style={{ width: "75%", marginRight: "15px" }} />
               <Button type='primary' onClick={verifyOtp} style={{ width: "20%" }}>Verify</Button>
             </Form.Item>
           </div>
