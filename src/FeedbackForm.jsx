@@ -10,12 +10,14 @@ import 'react-phone-number-input/style.css';
 import Footer from './Components/Footer';
 import UserNav from './Components/UserNav';
 import './custom.css';
+import axios from 'axios';
 
 function FeedbackForm() {
     const [displayform, setDisplay] = useState(true)
     const [em_value, setEmValue] = useState('')
     const [nm_value, setNmValue] = useState('')
     const [ph_value, setPhValue] = useState()
+    const token = localStorage.getItem("token");
 
     const [checked_val, setCheckBoxChecked] = useState([]);
     const [error_msg, setErrorMsg] = useState('Please enter the value for the above field');
@@ -82,7 +84,7 @@ function FeedbackForm() {
         else return true;
     };
     
-    const formSubmit = (e) =>{
+    const formSubmit = async(e) =>{
         e.preventDefault();
 
         if (validateForm())
@@ -95,14 +97,25 @@ function FeedbackForm() {
                 new_id = parseInt(lastentry["id"]) + 1;
             }
             var entry = {
-                "id": new_id, 
+                
                 "email": em_value,
                 "name": nm_value,
                 "phone": ph_value,
-                "checkbox_values": checked_val,
+                "checkBoxValues": checked_val,
             };
+
+            const response = await axios.post(`${import.meta.env.VITE_URL}/feedback/save`,
+                {
+                    "Header" : {
+                        Authorization : `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                }
+            )
+            console.log(response.data);
             // Save allEntries back to local storage
             existingEntries.push(entry);
+            console.log(entry)
             localStorage.setItem("allEntries", JSON.stringify(existingEntries));
             setDisplay(false)
         }
