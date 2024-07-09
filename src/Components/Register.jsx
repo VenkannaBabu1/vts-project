@@ -94,7 +94,7 @@ const Register = () => {
         
       });
   } else {
-   notification.danger({message:"Invalid OTP"});
+   notification.error({message:"Invalid OTP"});
   }
 }
 
