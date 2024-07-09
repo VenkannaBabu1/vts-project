@@ -65,7 +65,8 @@ const Register = () => {
   const [originalOtp, setOriginalOtp] = useState('');
   const [isOtpVerified, setIsOtpVerified] = useState(false);
 
-  const generateOtp = async () => {
+  const generateOtp = async (e) => {
+    e.preventDefault();
     try {
       const res = await axios.get(`${import.meta.env.VITE_URL}/otp/generate-register-otp/${email}`);
       setOriginalOtp(res.data);
@@ -82,7 +83,8 @@ const Register = () => {
     }
   }
 
-  const verifyOtp = () => {
+  const verifyOtp = (e) => {
+    e.preventDefault();
     console.log("normal",otp);
     console.log("backend otp",originalOtp);
   if ( otp == originalOtp ){
