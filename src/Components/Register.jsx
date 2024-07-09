@@ -89,9 +89,12 @@ const Register = () => {
     console.log("normal",otp);
     console.log("backend otp",originalOtp);
     setIsOtpVerified(true);
-    toast.success('OTP verified successfully!');
+   notification.success({
+        message: 'Verified Successfully',
+        
+      });
   } else {
-    toast.error('Invalid OTP');
+   notification.danger({message:"Invalid OTP"});
   }
 }
 
